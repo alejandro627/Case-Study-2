@@ -1,0 +1,7 @@
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+matplotlib>=3.8
+pymoo>=0.6,<0.7
+simpy>=4.1
+psutil>=5.9
