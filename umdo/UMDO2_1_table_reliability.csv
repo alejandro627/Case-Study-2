@@ -1,0 +1,5 @@
+Representative,Q0.05(TH_d),Q0.95(E) [kWh],P(TH req.),P(E req.),P(recovery)
+Max throughput,226.125,8.979680141099998,1.0,1.0,1.0
+Min energy,77.625,4.0357517878,1.0,1.0,0.968
+Max resilience,165.375,7.40787294015,1.0,1.0,1.0
+Balanced,165.375,6.5649392384,1.0,1.0,1.0

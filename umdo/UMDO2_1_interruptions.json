@@ -1,0 +1,12 @@
+{
+ "note": "Interruptions of the UMDO 2.1 pipeline (no effect on results; resumes are exact). Times from the run logs and the Windows Kernel-Power event log.",
+ "search_stop_restart": {
+  "stopped_during_generation": 5,
+  "resumed": "2026-11-16 23:03:30",
+  "comment": "run stopped manually; generations 1-4 kept (checkpoint), partial generation 5 discarded and recomputed"
+ },
+ "search_standby_s": 8964,
+ "search_standby": "Modern Standby 2026-11-17 06:05:20 to 08:34:44 during generation 38 (processes frozen, resumed unchanged)",
+ "verify_pause_s": 2023,
+ "verify_pause": "manual suspension 2026-11-17 09:41:27 to 10:15:10 (processes frozen, resumed unchanged)"
+}

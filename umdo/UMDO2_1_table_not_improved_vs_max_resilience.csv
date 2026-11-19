@@ -1,0 +1,8 @@
+Indicator,Not improved (K = 1),Max resilience,Relative change
+Mean disrupted throughput [products/h],165.375,165.375,+0.0 %
+Mean energy [kWh/shift],7.356864658752,7.357088867811333,+0.0 %
+Production loss PL [products],0.0,0.0,–
+R_phi(t_f),0.9295865550602667,0.9293897921150667,-0.0 %
+TST [min],65.64703792989852,65.57400113544105,-0.1 %
+TUT [min],337.96,338.56,+0.2 %
+P(recovery),1.0,1.0,+0.0 %

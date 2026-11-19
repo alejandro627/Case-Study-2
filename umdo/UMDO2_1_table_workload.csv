@@ -1,0 +1,9 @@
+Item,Value
+Generations completed,"40 of 40 (budget exhausted, stopping rule not met)"
+Requests / unique designs,"2,400 / 2,192 (of 131,220)"
+DES runs (search),"326,100 executed + 2,700 reused from UMDA 2.1 stage A"
+Feasible designs in the archive,"1,804 (82.3 %)"
+Archive front (N = 50),"224 designs, HV 0.7718"
+"Verification (N = 100, independent samples)","224 candidates, 67,200 runs; 222 feasible; verified front 214 designs"
+High fidelity (N = 500),"4 representatives + not-improved variant, 7,500 runs"
+Wall-clock,"search 10.81 h elapsed, 8.32 h computing (excl. 149 min system standby); verification 119.6 min elapsed, 85.8 min computing (excl. 34 min pause); high fidelity 11.1 min (10 workers)"

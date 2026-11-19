@@ -1,0 +1,14 @@
+{
+ "candidates": 224,
+ "N": 100,
+ "des_runs": 67200,
+ "verified_feasible": 222,
+ "verified_front": 214,
+ "wall_s": 7173.195307599992,
+ "representatives": {
+  "max_throughput": "Z3133323114",
+  "min_energy": "Z1211111341",
+  "max_resilience": "Z3133323341",
+  "balanced": "Z3111331241"
+ }
+}
