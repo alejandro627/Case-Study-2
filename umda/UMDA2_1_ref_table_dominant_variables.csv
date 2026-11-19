@@ -1,0 +1,61 @@
+Configuration,Scenario,Output,Dominant uncertain variable,SRC,Pearson
+REF,UR10 breakdown only,Disrupted TH [products/h],- (constant response),,
+REF,UR10 breakdown only,Energy [kWh],RT_UR10,0.61740447,0.61740447
+REF,UR10 breakdown only,PL [products],- (constant response),,
+REF,UR10 breakdown only,TST [min],- (too few defined runs),,
+REF,UR10 breakdown only,TUT [min],- (constant response),,
+REF,UR10 breakdown only,R_phi(t_f),RT_UR10,-0.9820842102,-0.9820842102
+REF,Shuttle breakdown only,Disrupted TH [products/h],- (constant response),,
+REF,Shuttle breakdown only,Energy [kWh],RT_sh,0.9923711514,0.9923711514
+REF,Shuttle breakdown only,PL [products],- (constant response),,
+REF,Shuttle breakdown only,TST [min],RT_sh,0.9935874208,0.9935874208
+REF,Shuttle breakdown only,TUT [min],RT_sh,-0.6412696386,-0.6412696386
+REF,Shuttle breakdown only,R_phi(t_f),RT_sh,-0.9509732166,-0.9509732166
+REF,UR3e breakdown only,Disrupted TH [products/h],- (constant response),,
+REF,UR3e breakdown only,Energy [kWh],RT_UR3e,0.7763297187,0.7763297187
+REF,UR3e breakdown only,PL [products],- (constant response),,
+REF,UR3e breakdown only,TST [min],- (too few defined runs),,
+REF,UR3e breakdown only,TUT [min],RT_UR3e,0.1548380569,0.1548380569
+REF,UR3e breakdown only,R_phi(t_f),RT_UR3e,0.289064633,0.289064633
+REF,FANUC breakdown only,Disrupted TH [products/h],- (constant response),,
+REF,FANUC breakdown only,Energy [kWh],RT_F,0.7639701493,0.7639701493
+REF,FANUC breakdown only,PL [products],- (constant response),,
+REF,FANUC breakdown only,TST [min],- (too few defined runs),,
+REF,FANUC breakdown only,TUT [min],RT_F,0.7576999203,0.7576999203
+REF,FANUC breakdown only,R_phi(t_f),RT_F,-0.603645831,-0.603645831
+REF,All four breakdowns,Disrupted TH [products/h],- (constant response),,
+REF,All four breakdowns,Energy [kWh],RT_sh,0.9287562471,0.9398727219
+REF,All four breakdowns,PL [products],- (constant response),,
+REF,All four breakdowns,TST [min],RT_sh,0.6132572727,0.6503096199
+REF,All four breakdowns,TUT [min],RT_F,0.5165199898,0.4980968627
+REF,All four breakdowns,R_phi(t_f),RT_sh,-0.8896702923,-0.8946870771
+HT,UR10 breakdown only,Disrupted TH [products/h],- (constant response),,
+HT,UR10 breakdown only,Energy [kWh],RT_UR10,0.9320842659,0.9320842659
+HT,UR10 breakdown only,PL [products],- (constant response),,
+HT,UR10 breakdown only,TST [min],RT_UR10,0.9695941548,0.9695941548
+HT,UR10 breakdown only,TUT [min],RT_UR10,-0.8124912722,-0.8124912722
+HT,UR10 breakdown only,R_phi(t_f),RT_UR10,-0.6280049506,-0.6280049506
+HT,Shuttle breakdown only,Disrupted TH [products/h],- (constant response),,
+HT,Shuttle breakdown only,Energy [kWh],RT_sh,0.9967012929,0.9967012929
+HT,Shuttle breakdown only,PL [products],- (constant response),,
+HT,Shuttle breakdown only,TST [min],RT_sh,0.9978455588,0.9978455588
+HT,Shuttle breakdown only,TUT [min],RT_sh,-0.7668438263,-0.7668438263
+HT,Shuttle breakdown only,R_phi(t_f),RT_sh,-0.9175713219,-0.9175713219
+HT,UR3e breakdown only,Disrupted TH [products/h],- (constant response),,
+HT,UR3e breakdown only,Energy [kWh],RT_UR3e,0.8441442973,0.8441442973
+HT,UR3e breakdown only,PL [products],- (constant response),,
+HT,UR3e breakdown only,TST [min],RT_UR3e,0.8366329596,0.8366329596
+HT,UR3e breakdown only,TUT [min],RT_UR3e,-0.7183181275,-0.7183181275
+HT,UR3e breakdown only,R_phi(t_f),RT_UR3e,-0.5493008404,-0.5493008404
+HT,FANUC breakdown only,Disrupted TH [products/h],- (constant response),,
+HT,FANUC breakdown only,Energy [kWh],RT_F,0.9773436783,0.9773436783
+HT,FANUC breakdown only,PL [products],- (constant response),,
+HT,FANUC breakdown only,TST [min],RT_F,0.9747755161,0.9747755161
+HT,FANUC breakdown only,TUT [min],RT_F,-0.5494148009,-0.5494148009
+HT,FANUC breakdown only,R_phi(t_f),RT_F,-0.4295359156,-0.4295359156
+HT,All four breakdowns,Disrupted TH [products/h],RT_sh,-0.3887010675,-0.4035467188
+HT,All four breakdowns,Energy [kWh],RT_sh,0.6661840392,0.6984478842
+HT,All four breakdowns,PL [products],RT_sh,0.3887010675,0.4035467188
+HT,All four breakdowns,TST [min],RT_sh,0.4687284683,0.4773675963
+HT,All four breakdowns,TUT [min],RT_F,-0.4035788455,-0.4063180358
+HT,All four breakdowns,R_phi(t_f),RT_F,-0.4467226731,-0.4609052311

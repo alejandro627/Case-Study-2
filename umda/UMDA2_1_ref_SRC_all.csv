@@ -1,0 +1,97 @@
+Configuration,Scenario,Output,variable,SRC,Pearson,n,note
+REF,UR10 breakdown only,Disrupted TH [products/h],RT_UR10,,,500,constant response
+REF,UR10 breakdown only,Energy [kWh],RT_UR10,0.61740447,0.61740447,500,
+REF,UR10 breakdown only,PL [products],RT_UR10,,,500,constant response
+REF,UR10 breakdown only,TST [min],RT_UR10,,,0,too few defined runs
+REF,UR10 breakdown only,TUT [min],RT_UR10,,,500,constant response
+REF,UR10 breakdown only,R_phi(t_f),RT_UR10,-0.9820842102,-0.9820842102,500,
+REF,Shuttle breakdown only,Disrupted TH [products/h],RT_sh,,,500,constant response
+REF,Shuttle breakdown only,Energy [kWh],RT_sh,0.9923711514,0.9923711514,500,
+REF,Shuttle breakdown only,PL [products],RT_sh,,,500,constant response
+REF,Shuttle breakdown only,TST [min],RT_sh,0.9935874208,0.9935874208,142,
+REF,Shuttle breakdown only,TUT [min],RT_sh,-0.6412696386,-0.6412696386,500,
+REF,Shuttle breakdown only,R_phi(t_f),RT_sh,-0.9509732166,-0.9509732166,500,
+REF,UR3e breakdown only,Disrupted TH [products/h],RT_UR3e,,,500,constant response
+REF,UR3e breakdown only,Energy [kWh],RT_UR3e,0.7763297187,0.7763297187,500,
+REF,UR3e breakdown only,PL [products],RT_UR3e,,,500,constant response
+REF,UR3e breakdown only,TST [min],RT_UR3e,,,0,too few defined runs
+REF,UR3e breakdown only,TUT [min],RT_UR3e,0.1548380569,0.1548380569,500,
+REF,UR3e breakdown only,R_phi(t_f),RT_UR3e,0.289064633,0.289064633,500,
+REF,FANUC breakdown only,Disrupted TH [products/h],RT_F,,,500,constant response
+REF,FANUC breakdown only,Energy [kWh],RT_F,0.7639701493,0.7639701493,500,
+REF,FANUC breakdown only,PL [products],RT_F,,,500,constant response
+REF,FANUC breakdown only,TST [min],RT_F,,,0,too few defined runs
+REF,FANUC breakdown only,TUT [min],RT_F,0.7576999203,0.7576999203,500,
+REF,FANUC breakdown only,R_phi(t_f),RT_F,-0.603645831,-0.603645831,500,
+REF,All four breakdowns,Disrupted TH [products/h],RT_UR10,,,500,constant response
+REF,All four breakdowns,Disrupted TH [products/h],RT_sh,,,500,constant response
+REF,All four breakdowns,Disrupted TH [products/h],RT_UR3e,,,500,constant response
+REF,All four breakdowns,Disrupted TH [products/h],RT_F,,,500,constant response
+REF,All four breakdowns,Energy [kWh],RT_UR10,0.1318295832,0.1443221247,500,
+REF,All four breakdowns,Energy [kWh],RT_sh,0.9287562471,0.9398727219,500,
+REF,All four breakdowns,Energy [kWh],RT_UR3e,0.1910754381,0.2111219028,500,
+REF,All four breakdowns,Energy [kWh],RT_F,0.06853937161,0.1076217786,500,
+REF,All four breakdowns,PL [products],RT_UR10,,,500,constant response
+REF,All four breakdowns,PL [products],RT_sh,,,500,constant response
+REF,All four breakdowns,PL [products],RT_UR3e,,,500,constant response
+REF,All four breakdowns,PL [products],RT_F,,,500,constant response
+REF,All four breakdowns,TST [min],RT_UR10,0.2078639307,0.2142775621,101,
+REF,All four breakdowns,TST [min],RT_sh,0.6132572727,0.6503096199,101,
+REF,All four breakdowns,TST [min],RT_UR3e,-0.1211567645,-0.1239241066,101,
+REF,All four breakdowns,TST [min],RT_F,0.1349473139,0.2797921133,101,
+REF,All four breakdowns,TUT [min],RT_UR10,0.01766867622,0.002625092166,500,
+REF,All four breakdowns,TUT [min],RT_sh,-0.3525903815,-0.3259273237,500,
+REF,All four breakdowns,TUT [min],RT_UR3e,0.02095425672,-0.003169800181,500,
+REF,All four breakdowns,TUT [min],RT_F,0.5165199898,0.4980968627,500,
+REF,All four breakdowns,R_phi(t_f),RT_UR10,-0.2930807377,-0.3116703603,500,
+REF,All four breakdowns,R_phi(t_f),RT_sh,-0.8896702923,-0.8946870771,500,
+REF,All four breakdowns,R_phi(t_f),RT_UR3e,0.07623169572,0.05989007401,500,
+REF,All four breakdowns,R_phi(t_f),RT_F,-0.02797543549,-0.07005310612,500,
+HT,UR10 breakdown only,Disrupted TH [products/h],RT_UR10,,,500,constant response
+HT,UR10 breakdown only,Energy [kWh],RT_UR10,0.9320842659,0.9320842659,500,
+HT,UR10 breakdown only,PL [products],RT_UR10,,,500,constant response
+HT,UR10 breakdown only,TST [min],RT_UR10,0.9695941548,0.9695941548,499,
+HT,UR10 breakdown only,TUT [min],RT_UR10,-0.8124912722,-0.8124912722,500,
+HT,UR10 breakdown only,R_phi(t_f),RT_UR10,-0.6280049506,-0.6280049506,500,
+HT,Shuttle breakdown only,Disrupted TH [products/h],RT_sh,,,500,constant response
+HT,Shuttle breakdown only,Energy [kWh],RT_sh,0.9967012929,0.9967012929,500,
+HT,Shuttle breakdown only,PL [products],RT_sh,,,500,constant response
+HT,Shuttle breakdown only,TST [min],RT_sh,0.9978455588,0.9978455588,440,
+HT,Shuttle breakdown only,TUT [min],RT_sh,-0.7668438263,-0.7668438263,500,
+HT,Shuttle breakdown only,R_phi(t_f),RT_sh,-0.9175713219,-0.9175713219,500,
+HT,UR3e breakdown only,Disrupted TH [products/h],RT_UR3e,,,500,constant response
+HT,UR3e breakdown only,Energy [kWh],RT_UR3e,0.8441442973,0.8441442973,500,
+HT,UR3e breakdown only,PL [products],RT_UR3e,,,500,constant response
+HT,UR3e breakdown only,TST [min],RT_UR3e,0.8366329596,0.8366329596,485,
+HT,UR3e breakdown only,TUT [min],RT_UR3e,-0.7183181275,-0.7183181275,500,
+HT,UR3e breakdown only,R_phi(t_f),RT_UR3e,-0.5493008404,-0.5493008404,500,
+HT,FANUC breakdown only,Disrupted TH [products/h],RT_F,,,500,constant response
+HT,FANUC breakdown only,Energy [kWh],RT_F,0.9773436783,0.9773436783,500,
+HT,FANUC breakdown only,PL [products],RT_F,,,500,constant response
+HT,FANUC breakdown only,TST [min],RT_F,0.9747755161,0.9747755161,500,
+HT,FANUC breakdown only,TUT [min],RT_F,-0.5494148009,-0.5494148009,500,
+HT,FANUC breakdown only,R_phi(t_f),RT_F,-0.4295359156,-0.4295359156,500,
+HT,All four breakdowns,Disrupted TH [products/h],RT_UR10,-0.04292064392,-0.0443737223,500,
+HT,All four breakdowns,Disrupted TH [products/h],RT_sh,-0.3887010675,-0.4035467188,500,
+HT,All four breakdowns,Disrupted TH [products/h],RT_UR3e,-0.1222313402,-0.1257791317,500,
+HT,All four breakdowns,Disrupted TH [products/h],RT_F,-0.2150299195,-0.2304067842,500,
+HT,All four breakdowns,Energy [kWh],RT_UR10,0.281713646,0.282773923,500,
+HT,All four breakdowns,Energy [kWh],RT_sh,0.6661840392,0.6984478842,500,
+HT,All four breakdowns,Energy [kWh],RT_UR3e,0.2482819452,0.2485346711,500,
+HT,All four breakdowns,Energy [kWh],RT_F,0.4035292465,0.425701814,500,
+HT,All four breakdowns,PL [products],RT_UR10,0.04292064392,0.0443737223,500,
+HT,All four breakdowns,PL [products],RT_sh,0.3887010675,0.4035467188,500,
+HT,All four breakdowns,PL [products],RT_UR3e,0.1222313402,0.1257791317,500,
+HT,All four breakdowns,PL [products],RT_F,0.2150299195,0.2304067842,500,
+HT,All four breakdowns,TST [min],RT_UR10,0.09881873561,0.1011486954,500,
+HT,All four breakdowns,TST [min],RT_sh,0.4687284683,0.4773675963,500,
+HT,All four breakdowns,TST [min],RT_UR3e,0.3092212344,0.3204201165,500,
+HT,All four breakdowns,TST [min],RT_F,-0.03213345076,-0.01874826466,500,
+HT,All four breakdowns,TUT [min],RT_UR10,-0.3627186732,-0.3563338638,500,
+HT,All four breakdowns,TUT [min],RT_sh,-0.3168205406,-0.3514386122,500,
+HT,All four breakdowns,TUT [min],RT_UR3e,-0.2773646061,-0.2663136425,500,
+HT,All four breakdowns,TUT [min],RT_F,-0.4035788455,-0.4063180358,500,
+HT,All four breakdowns,R_phi(t_f),RT_UR10,-0.2546431237,-0.2532690083,500,
+HT,All four breakdowns,R_phi(t_f),RT_sh,-0.4338055056,-0.4645745736,500,
+HT,All four breakdowns,R_phi(t_f),RT_UR3e,-0.1322699484,-0.1257080961,500,
+HT,All four breakdowns,R_phi(t_f),RT_F,-0.4467226731,-0.4609052311,500,
