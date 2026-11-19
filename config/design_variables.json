@@ -1,0 +1,537 @@
+{
+    "meta": {
+        "title": "CS2 Montrac transfer line - design variables of the initial deterministic MDO",
+        "version": "1.4",
+        "date": "2026-11-13",
+        "source": "Design-variable table for Transfer Line 3.0 (DES v10.0): reference throughput 101.25 products/h and energy 5.561 kWh (1 shuttle, 8 h) = the TL3 DES baseline.",
+        "status": "Reference system responses for INDIVIDUAL DV alternatives (other DVs at baseline, 1 shuttle, 8 h). They are used ONLY as calibration targets / checks of the single alternatives (cs2_mdo/mda/calibration.py). Task-level effects from industrial reports enter the DES as process parameters; combined configurations are computed by the DES, never by combining coefficients.",
+        "maintenance_policy": "excluded from the initial optimization",
+        "des_support_note": "implemented = physically represented with measured / supplied parameters; implemented_calibrated = represented with parameters calibrated to the coefficients (config/alternatives_calibration.json); not_implemented = returns unsupported_configuration.",
+        "revision_note": "v1.4: absolute references moved to the TL3 DES (101.25 products/h, 5.561 kWh); DV1 coefficients = TL3 DES results (TH 1.7111 / 1.9333, E 1.293 / 1.389); DV4 L1 energy 0.920 -> 0.946 (0.920 not reachable with the UR3e idle at WS4: it would need negative station power); DV8 L1 / L3 energy 1.014 / 0.979 -> 1.012 / 0.982 (TL3 DES results); all other coefficients unchanged; task times in the descriptions updated to the TL3 measurements."
+    },
+    "response_definitions": {
+        "reference_throughput_products_per_h": "throughput, products per hour (rounded, as supplied)",
+        "reference_energy_kWh_8h": "total electrical energy over an 8 h production horizon, kWh (rounded, as supplied)",
+        "reference_throughput_coefficient": "throughput relative to the baseline (as supplied)",
+        "reference_energy_coefficient": "8 h energy relative to the baseline (as supplied)",
+        "task_speed_up": "DV6: speed-up of the inspection task, a DES process parameter"
+    },
+    "n_design_variables": 9,
+    "n_configurations": 26244,
+    "baseline": {
+        "DV1": 1,
+        "DV2": 3,
+        "DV3": 1,
+        "DV4": 3,
+        "DV5": 3,
+        "DV6": 1,
+        "DV7": 3,
+        "DV8": 2,
+        "DV9": 1
+    },
+    "baseline_reference_responses": {
+        "throughput_products_per_h": 101.25,
+        "energy_kWh_8h": 5.561,
+        "note": "rounded reference values; the TL3 DES (v10.0) gives 101.25 products/h and 5.560895 kWh for the baseline (1 shuttle, 8 h)"
+    },
+    "design_variables": {
+        "DV1": {
+            "name": "Number of active Montrac shuttles",
+            "primary_discipline": "D1",
+            "domain": [
+                1,
+                2,
+                3
+            ],
+            "baseline_level": 1,
+            "levels": {
+                "1": {
+                    "alternative": "One active shuttle",
+                    "reference_throughput_products_per_h": 101.25,
+                    "reference_energy_kWh_8h": 5.561,
+                    "is_baseline_level": true,
+                    "des_support": {
+                        "status": "implemented",
+                        "des_representation": "1 shuttle (simulation.n_shuttles = 1)",
+                        "config_overrides": {
+                            "simulation.n_shuttles": 1
+                        }
+                    },
+                    "reference_throughput_coefficient": 1.0,
+                    "reference_energy_coefficient": 1.0
+                },
+                "2": {
+                    "alternative": "Two active shuttles",
+                    "reference_throughput_products_per_h": 173.3,
+                    "reference_energy_kWh_8h": 7.19,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented",
+                        "des_representation": "2 shuttles (simulation.n_shuttles = 2)",
+                        "config_overrides": {
+                            "simulation.n_shuttles": 2
+                        }
+                    },
+                    "reference_throughput_coefficient": 1.7111,
+                    "reference_energy_coefficient": 1.293
+                },
+                "3": {
+                    "alternative": "Three active shuttles",
+                    "reference_throughput_products_per_h": 195.8,
+                    "reference_energy_kWh_8h": 7.723,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented",
+                        "des_representation": "3 shuttles (simulation.n_shuttles = 3)",
+                        "config_overrides": {
+                            "simulation.n_shuttles": 3
+                        }
+                    },
+                    "reference_throughput_coefficient": 1.9333,
+                    "reference_energy_coefficient": 1.389
+                }
+            }
+        },
+        "DV2": {
+            "name": "Tray-loading automation level",
+            "primary_discipline": "D2",
+            "domain": [
+                1,
+                2,
+                3
+            ],
+            "baseline_level": 3,
+            "levels": {
+                "1": {
+                    "alternative": "Fully manual tray loading",
+                    "reference_throughput_products_per_h": 95.175,
+                    "reference_energy_kWh_8h": 5.305,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented_calibrated",
+                        "alternative_id": "DV2_L1",
+                        "des_representation": "Operator_WS6 loads the two trays manually; manual workstation equipment WSE_WS6_manual (calibrated time and power)"
+                    },
+                    "reference_throughput_coefficient": 0.94,
+                    "reference_energy_coefficient": 0.954,
+                    "revision_note": "revised (manual workstation equipment of about 55 W)"
+                },
+                "2": {
+                    "alternative": "Collaborative robot-assisted tray loading",
+                    "reference_throughput_products_per_h": 98.213,
+                    "reference_energy_kWh_8h": 5.477,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented_calibrated",
+                        "alternative_id": "DV2_L2",
+                        "des_representation": "UR10 + Operator_WS6 load collaboratively; UR10 collaborative-mode power calibrated"
+                    },
+                    "reference_throughput_coefficient": 0.97,
+                    "reference_energy_coefficient": 0.985,
+                    "revision_note": "derived from the DES (collaborative robot: same energy per task)"
+                },
+                "3": {
+                    "alternative": "Fully automated and reconfigurable tray loading",
+                    "reference_throughput_products_per_h": 101.25,
+                    "reference_energy_kWh_8h": 5.561,
+                    "is_baseline_level": true,
+                    "des_support": {
+                        "status": "implemented",
+                        "des_representation": "UR10 loads two empty trays at WS6 (34.78 s)",
+                        "config_overrides": {}
+                    },
+                    "reference_throughput_coefficient": 1.0,
+                    "reference_energy_coefficient": 1.0
+                }
+            }
+        },
+        "DV3": {
+            "name": "Workpiece-setup automation level",
+            "primary_discipline": "D5",
+            "domain": [
+                1,
+                2,
+                3
+            ],
+            "baseline_level": 1,
+            "levels": {
+                "1": {
+                    "alternative": "Fully manual workpiece setup",
+                    "reference_throughput_products_per_h": 101.25,
+                    "reference_energy_kWh_8h": 5.561,
+                    "is_baseline_level": true,
+                    "des_support": {
+                        "status": "implemented",
+                        "des_representation": "Operator_WS9 manual setup at WS9 (17.81 s)",
+                        "config_overrides": {}
+                    },
+                    "reference_throughput_coefficient": 1.0,
+                    "reference_energy_coefficient": 1.0
+                },
+                "2": {
+                    "alternative": "Collaborative robot-assisted workpiece setup",
+                    "reference_throughput_products_per_h": 103.275,
+                    "reference_energy_kWh_8h": 5.639,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented_calibrated",
+                        "alternative_id": "DV3_L2",
+                        "des_representation": "UR3e_WS9 (robot at WS9, separate from the UR3e at WS4, off between shuttles) + Operator_WS9; calibrated time and power"
+                    },
+                    "reference_throughput_coefficient": 1.02,
+                    "reference_energy_coefficient": 1.014,
+                    "revision_note": "derived from the DES (UR3e-class robot at WS9, off between shuttles)"
+                },
+                "3": {
+                    "alternative": "Fully automated and flexible workpiece setup",
+                    "reference_throughput_products_per_h": 105.3,
+                    "reference_energy_kWh_8h": 5.683,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented_calibrated",
+                        "alternative_id": "DV3_L3",
+                        "des_representation": "UR3e_WS9 alone, fully automated setup (off between shuttles); calibrated time and power"
+                    },
+                    "reference_throughput_coefficient": 1.04,
+                    "reference_energy_coefficient": 1.022,
+                    "revision_note": "derived from the DES (UR3e-class robot at WS9, off between shuttles)"
+                }
+            }
+        },
+        "DV4": {
+            "name": "WS4 assembly automation level",
+            "primary_discipline": "D3",
+            "domain": [
+                1,
+                2,
+                3
+            ],
+            "baseline_level": 3,
+            "levels": {
+                "1": {
+                    "alternative": "Fully manual assembly",
+                    "reference_throughput_products_per_h": 93.15,
+                    "reference_energy_kWh_8h": 5.261,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented_calibrated",
+                        "alternative_id": "DV4_L1",
+                        "des_representation": "Operator_WS4 assembles manually, UR3e idle; WSE_WS4_manual (calibrated time and power)"
+                    },
+                    "reference_throughput_coefficient": 0.92,
+                    "reference_energy_coefficient": 0.946,
+                    "revision_note": "revised: energy coefficient 0.946 (TL3); with the UR3e idle at WS4 the minimum DES energy ratio of manual assembly is about 0.946 (0 W station equipment), so 0.920 was not reachable"
+                },
+                "2": {
+                    "alternative": "Collaborative robot-assisted assembly",
+                    "reference_throughput_products_per_h": 98.213,
+                    "reference_energy_kWh_8h": 5.477,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented_calibrated",
+                        "alternative_id": "DV4_L2",
+                        "des_representation": "UR3e + Operator_WS4 assemble collaboratively; UR3e collaborative-mode power calibrated"
+                    },
+                    "reference_throughput_coefficient": 0.97,
+                    "reference_energy_coefficient": 0.985,
+                    "revision_note": "derived from the DES (collaborative robot: same energy per task)"
+                },
+                "3": {
+                    "alternative": "Fully automated and reconfigurable assembly",
+                    "reference_throughput_products_per_h": 101.25,
+                    "reference_energy_kWh_8h": 5.561,
+                    "is_baseline_level": true,
+                    "des_support": {
+                        "status": "implemented",
+                        "des_representation": "UR3e assembly at WS4 (59.76 s)",
+                        "config_overrides": {}
+                    },
+                    "reference_throughput_coefficient": 1.0,
+                    "reference_energy_coefficient": 1.0
+                }
+            }
+        },
+        "DV5": {
+            "name": "FANUC assembly automation level",
+            "primary_discipline": "D3",
+            "domain": [
+                1,
+                2,
+                3
+            ],
+            "baseline_level": 3,
+            "levels": {
+                "1": {
+                    "alternative": "Fully manual assembly",
+                    "reference_throughput_products_per_h": 95.175,
+                    "reference_energy_kWh_8h": 5.116,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented_calibrated",
+                        "alternative_id": "DV5_L1",
+                        "des_representation": "Operator_FANUC assembles manually with the conveyor, FANUC robot idle; WSE_FANUC_manual (calibrated)"
+                    },
+                    "reference_throughput_coefficient": 0.94,
+                    "reference_energy_coefficient": 0.92
+                },
+                "2": {
+                    "alternative": "Collaborative robot-assisted assembly",
+                    "reference_throughput_products_per_h": 99.225,
+                    "reference_energy_kWh_8h": 5.427,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented_calibrated",
+                        "alternative_id": "DV5_L2",
+                        "des_representation": "FANUC robot + Operator_FANUC assemble collaboratively; FANUC cell collaborative-mode power calibrated"
+                    },
+                    "reference_throughput_coefficient": 0.98,
+                    "reference_energy_coefficient": 0.976,
+                    "revision_note": "derived from the DES (collaborative robot: same energy per task)"
+                },
+                "3": {
+                    "alternative": "Fully automated and reconfigurable assembly",
+                    "reference_throughput_products_per_h": 101.25,
+                    "reference_energy_kWh_8h": 5.561,
+                    "is_baseline_level": true,
+                    "des_support": {
+                        "status": "implemented",
+                        "des_representation": "FANUC robot + conveyor cell (80.54 s)",
+                        "config_overrides": {}
+                    },
+                    "reference_throughput_coefficient": 1.0,
+                    "reference_energy_coefficient": 1.0
+                }
+            }
+        },
+        "DV6": {
+            "name": "Quality-control assistance level",
+            "primary_discipline": "D4",
+            "domain": [
+                1,
+                2,
+                3
+            ],
+            "baseline_level": 1,
+            "levels": {
+                "1": {
+                    "alternative": "Basic inspection assistance",
+                    "reference_throughput_products_per_h": 101.25,
+                    "reference_energy_kWh_8h": 5.561,
+                    "is_baseline_level": true,
+                    "des_support": {
+                        "status": "implemented",
+                        "des_representation": "Operator_WS8 inspection without assistance (14.91 s)",
+                        "config_overrides": {}
+                    },
+                    "reference_throughput_coefficient": 1.0,
+                    "reference_energy_coefficient": 1.0
+                },
+                "2": {
+                    "alternative": "Guided inspection assistance",
+                    "reference_throughput_products_per_h": 102.364,
+                    "reference_energy_kWh_8h": 5.617,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented_calibrated",
+                        "alternative_id": "DV6_L2",
+                        "des_representation": "inspection x1.30 faster (guided assistance); assistance equipment always on (power calibrated)"
+                    },
+                    "reference_throughput_coefficient": 1.011,
+                    "reference_energy_coefficient": 1.01,
+                    "revision_note": "revised: inspection speed-up x1.30 selected; the line coefficient 1.011 is the DES result with 1 shuttle (TL3: inspection is 14.91 s of a 319.40 s cycle; upper bound x1.049)",
+                    "task_speed_up": 1.3
+                },
+                "3": {
+                    "alternative": "Smart, adaptive inspection assistance",
+                    "reference_throughput_products_per_h": 103.68,
+                    "reference_energy_kWh_8h": 5.728,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented_calibrated",
+                        "alternative_id": "DV6_L3",
+                        "des_representation": "inspection x2.00 faster (smart, adaptive assistance); assistance equipment always on (power calibrated)"
+                    },
+                    "reference_throughput_coefficient": 1.024,
+                    "reference_energy_coefficient": 1.03,
+                    "revision_note": "revised: inspection speed-up x2.00 selected; the line coefficient 1.024 is the DES result with 1 shuttle (TL3: inspection is 14.91 s of a 319.40 s cycle; upper bound x1.049)",
+                    "task_speed_up": 2.0
+                }
+            }
+        },
+        "DV7": {
+            "name": "Finished-product dispatch automation level",
+            "primary_discipline": "D2",
+            "domain": [
+                1,
+                2,
+                3
+            ],
+            "baseline_level": 3,
+            "levels": {
+                "1": {
+                    "alternative": "Fully manual finished-product dispatch",
+                    "reference_throughput_products_per_h": 96.188,
+                    "reference_energy_kWh_8h": 5.311,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented_calibrated",
+                        "alternative_id": "DV7_L1",
+                        "des_representation": "Operator_WS8_dispatch unloads the three trays manually; WSE_WS8_dispatch_manual (calibrated)"
+                    },
+                    "reference_throughput_coefficient": 0.95,
+                    "reference_energy_coefficient": 0.955,
+                    "revision_note": "revised (manual workstation equipment of about 62 W)"
+                },
+                "2": {
+                    "alternative": "Collaborative robot-assisted finished-product dispatch",
+                    "reference_throughput_products_per_h": 99.225,
+                    "reference_energy_kWh_8h": 5.511,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented_calibrated",
+                        "alternative_id": "DV7_L2",
+                        "des_representation": "UR10 + Operator_WS8_dispatch unload collaboratively; UR10 collaborative-mode power calibrated"
+                    },
+                    "reference_throughput_coefficient": 0.98,
+                    "reference_energy_coefficient": 0.991,
+                    "revision_note": "derived from the DES (collaborative robot: same energy per task)"
+                },
+                "3": {
+                    "alternative": "Fully automated and flexible finished-product dispatch",
+                    "reference_throughput_products_per_h": 101.25,
+                    "reference_energy_kWh_8h": 5.561,
+                    "is_baseline_level": true,
+                    "des_support": {
+                        "status": "implemented",
+                        "des_representation": "UR10 dispatches three trays at WS8 (54.22 s)",
+                        "config_overrides": {}
+                    },
+                    "reference_throughput_coefficient": 1.0,
+                    "reference_energy_coefficient": 1.0
+                }
+            }
+        },
+        "DV8": {
+            "name": "Inspection policy level",
+            "primary_discipline": "D4",
+            "domain": [
+                1,
+                2,
+                3
+            ],
+            "baseline_level": 2,
+            "levels": {
+                "1": {
+                    "alternative": "Low inspection",
+                    "reference_throughput_products_per_h": 104.49,
+                    "reference_energy_kWh_8h": 5.6276,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented_calibrated",
+                        "alternative_id": "DV8_L1",
+                        "des_representation": "low inspection: a sample of 3 of the 9 products (one per tray), inspection 14.91 s x 3/9; no electrical change"
+                    },
+                    "reference_throughput_coefficient": 1.032,
+                    "reference_energy_coefficient": 1.012,
+                    "revision_note": "revised: throughput 1.032 and energy 1.014 were the DES 9.3 results; TL3 (v1.4): 1.032 and 1.012 for sampling 3 of 9 products (inspection uses no electricity, more output -> more robot energy per 8 h, less per product)"
+                },
+                "2": {
+                    "alternative": "Moderate inspection",
+                    "reference_throughput_products_per_h": 101.25,
+                    "reference_energy_kWh_8h": 5.561,
+                    "is_baseline_level": true,
+                    "des_support": {
+                        "status": "implemented",
+                        "des_representation": "inspection of the 9 products of each batch (14.91 s), defect-free nominal case",
+                        "config_overrides": {}
+                    },
+                    "reference_throughput_coefficient": 1.0,
+                    "reference_energy_coefficient": 1.0
+                },
+                "3": {
+                    "alternative": "Full inspection",
+                    "reference_throughput_products_per_h": 95.884,
+                    "reference_energy_kWh_8h": 5.461,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented_calibrated",
+                        "alternative_id": "DV8_L3",
+                        "des_representation": "full inspection by Operator_WS8, longer manual inspection (calibrated time); no electrical equipment; energy is the DES result"
+                    },
+                    "reference_throughput_coefficient": 0.947,
+                    "reference_energy_coefficient": 0.982,
+                    "revision_note": "revised: throughput 0.947 selected; manual full inspection (0 W) like levels 1-2, so the energy coefficient is the DES result (fewer products -> robots work less); DES 9.3: x0.9787; TL3 (v1.4): energy coefficient 0.982"
+                }
+            }
+        },
+        "DV9": {
+            "name": "Energy-management policy",
+            "primary_discipline": "D6",
+            "domain": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "baseline_level": 1,
+            "levels": {
+                "1": {
+                    "alternative": "Standard powered operation",
+                    "reference_throughput_products_per_h": 101.25,
+                    "reference_energy_kWh_8h": 5.561,
+                    "is_baseline_level": true,
+                    "des_support": {
+                        "status": "implemented",
+                        "des_representation": "idle powers of the energy section; Endian, HMI, auxiliary and infrastructure always on",
+                        "config_overrides": {},
+                        "energy_policy": "standard_powered_operation"
+                    },
+                    "reference_throughput_coefficient": 1.0,
+                    "reference_energy_coefficient": 1.0
+                },
+                "2": {
+                    "alternative": "Reduced idle-power operation",
+                    "reference_throughput_products_per_h": 95.175,
+                    "reference_energy_kWh_8h": 5.394,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented_calibrated",
+                        "alternative_id": "DV9_L2",
+                        "des_representation": "reduced idle power of robots and FANUC cell + wake-up delay (calibrated)",
+                        "energy_policy": "reduced_idle_power_operation"
+                    },
+                    "reference_throughput_coefficient": 0.94,
+                    "reference_energy_coefficient": 0.97
+                },
+                "3": {
+                    "alternative": "Inactivity-triggered standby/sleep operation",
+                    "reference_throughput_products_per_h": 92.138,
+                    "reference_energy_kWh_8h": 5.227,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented_calibrated",
+                        "alternative_id": "DV9_L3",
+                        "des_representation": "inactivity-triggered standby/sleep of robots and FANUC cell + wake-up delay (calibrated)",
+                        "energy_policy": "inactivity_triggered_standby_sleep"
+                    },
+                    "reference_throughput_coefficient": 0.91,
+                    "reference_energy_coefficient": 0.94
+                },
+                "4": {
+                    "alternative": "State-dependent adaptive energy management",
+                    "reference_throughput_products_per_h": 87.075,
+                    "reference_energy_kWh_8h": 5.116,
+                    "is_baseline_level": false,
+                    "des_support": {
+                        "status": "implemented_calibrated",
+                        "alternative_id": "DV9_L4",
+                        "des_representation": "state-dependent adaptive standby of robots and FANUC cell + wake-up delay (calibrated)",
+                        "energy_policy": "state_dependent_adaptive_energy_management"
+                    },
+                    "reference_throughput_coefficient": 0.86,
+                    "reference_energy_coefficient": 0.92
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,281 @@
+{
+ "meta": {
+  "version": "UDES 2.1",
+  "date": "2026-11-16",
+  "applies_to": "CS2 Transfer Line 3.0, DES v10.0 (unchanged code) + DV10 timing/auxiliary power (= 'DES v10.1' behaviour, implemented in cs2_mdo/udes_2_0), MDA 1.5, disruption scenario set CS2-DS-v2 (DS0-DS15) of UDES 1.1",
+  "source_data": "config/uncertain_DVs_snapshot_2026-11-16.csv (restoration-time coefficients per DV level)",
+  "modelling_decisions": [
+   "objectives for UMDO 2.0: max E[TH_d] (mean throughput under disruption), min E[E_d], max E[R_phi(t_f)]; R_rate, TTR, RL, PL, TST, TUT and TH_d are reported only",
+   "restoration-time coefficients: product over all DVs, level 1 = base for every DV (no normalisation to a reference design); mean and standard deviation scaled",
+   "DV10 throughput/energy: use the table values; generic mechanism chosen by the modeller (uniform timing factor + constant auxiliary power)",
+   "adaptation mechanisms: manual fallback, ramp-up after restart, backlog catch-up by a temporary speed-up at extra energy",
+   "R_phi evaluated at t_f = restoration + 60 min"
+  ],
+  "status": "engineering assumptions (switch-over delay, manual-time factor, ramp start/duration, speed-up and energy exponent) of the uncertainty model; not measured",
+  "supersedes": "UDES 2.0 (config/udes_2_0_config.json): catch-up termination 'count', R_phi at restoration + 60 min",
+  "revision_UDES_2_1": "catch-up termination 'time_lag' (runs until the line is back on plan in time, re-arms when behind); R_phi evaluated at t_f = restoration + 30 min (stability check 15/30/45 min)"
+ },
+ "restoration_time": {
+  "distribution": "truncated_normal (lower bound 0), parameters of the underlying normal (as UDES 1.1)",
+  "base_level": "level 1 of every DV",
+  "combination": "product",
+  "scaling": "mean_and_sd",
+  "variables": {
+   "RT_UR10": {
+    "resource": "UR10",
+    "mean_min": 18.0,
+    "sd_min": 5.0,
+    "stream": 1
+   },
+   "RT_sh": {
+    "resource": "Shuttle",
+    "mean_min": 7.0,
+    "sd_min": 3.0,
+    "stream": 2
+   },
+   "RT_UR3e": {
+    "resource": "UR3e",
+    "mean_min": 10.0,
+    "sd_min": 4.0,
+    "stream": 3
+   },
+   "RT_F": {
+    "resource": "FANUC",
+    "mean_min": 15.0,
+    "sd_min": 4.0,
+    "stream": 4
+   }
+  },
+  "coefficients": {
+   "DV2": {
+    "RT_UR10": {
+     "1": 1.0,
+     "2": 0.98,
+     "3": 0.96
+    }
+   },
+   "DV4": {
+    "RT_UR3e": {
+     "1": 1.0,
+     "2": 0.98,
+     "3": 0.96
+    }
+   },
+   "DV5": {
+    "RT_F": {
+     "1": 1.0,
+     "2": 0.98,
+     "3": 0.96
+    }
+   },
+   "DV7": {
+    "RT_UR10": {
+     "1": 1.0,
+     "2": 0.98,
+     "3": 0.96
+    }
+   },
+   "DV10": {
+    "RT_UR10": {
+     "1": 1.0,
+     "2": 0.97,
+     "3": 0.92,
+     "4": 0.85,
+     "5": 0.8
+    },
+    "RT_sh": {
+     "1": 1.0,
+     "2": 0.97,
+     "3": 0.92,
+     "4": 0.85,
+     "5": 0.8
+    },
+    "RT_UR3e": {
+     "1": 1.0,
+     "2": 0.97,
+     "3": 0.92,
+     "4": 0.85,
+     "5": 0.8
+    },
+    "RT_F": {
+     "1": 1.0,
+     "2": 0.97,
+     "3": 0.92,
+     "4": 0.85,
+     "5": 0.8
+    }
+   }
+  },
+  "note": "All other DV levels have coefficient 1.0 for all four variables (spreadsheet columns J-M)."
+ },
+ "dv10": {
+  "labels": {
+   "1": "Corrective (minimal preventive)",
+   "2": "Periodic maintenance",
+   "3": "Condition-based",
+   "4": "Predictive maintenance",
+   "5": "Fully proactive maintenance"
+  },
+  "throughput_coefficient": {
+   "1": 1.0,
+   "2": 1.025,
+   "3": 1.0625,
+   "4": 1.0875,
+   "5": 1.075
+  },
+  "energy_coefficient": {
+   "1": 1.0,
+   "2": 1.06,
+   "3": 1.11,
+   "4": 1.16,
+   "5": 1.2
+  },
+  "reference": {
+   "design": "TL3 DES baseline (DV1 = 1 shuttle, other DVs at their baseline levels), 8 h",
+   "throughput_products_per_h": 101.25,
+   "energy_Wh": 5560.895
+  },
+  "mechanism": "timing factor s = throughput coefficient: every DES duration (operations, manual tasks, corrections, wake-ups, repositioning, shuttle travel, station-release clearance) is divided by s, so the periodic cycle rate of every design scales by exactly s; a constant auxiliary power P_aux (maintenance / condition-monitoring equipment, always on) is calibrated so that the baseline 8-h energy equals the energy coefficient x 5560.895 Wh. Restoration durations, the fallback switch-over and the ramp durations are NOT scaled (real time).",
+  "aux_power_W": {
+   "1": -1.1368683772161603e-12,
+   "2": 41.06249671409387,
+   "3": 76.30810281862671,
+   "4": 111.27579032566825,
+   "5": 138.92826162790584
+  },
+  "calibration": {
+   "basis": "TL3 baseline Z131331321x, 1 shuttle, 8 h, nominal (DS0)",
+   "rows": [
+    {
+     "level": 1,
+     "s": 1.0,
+     "TH_target": 101.25,
+     "TH_ss_DES": 101.44020037570439,
+     "TH_8h_DES": 101.25,
+     "N_8h": 810,
+     "E_DES_Wh": 5560.8950000000095,
+     "E_target_Wh": 5560.895,
+     "aux_W": -1.1368683772161603e-12
+    },
+    {
+     "level": 2,
+     "s": 1.025,
+     "TH_target": 103.78124999999999,
+     "TH_ss_DES": 103.97620538509705,
+     "TH_8h_DES": 103.5,
+     "N_8h": 828,
+     "E_DES_Wh": 5566.04872628725,
+     "E_target_Wh": 5894.548700000001,
+     "aux_W": 41.06249671409387
+    },
+    {
+     "level": 3,
+     "s": 1.0625,
+     "TH_target": 107.578125,
+     "TH_ss_DES": 107.78021289918597,
+     "TH_8h_DES": 106.875,
+     "N_8h": 855,
+     "E_DES_Wh": 5562.128627450988,
+     "E_target_Wh": 6172.593450000001,
+     "aux_W": 76.30810281862671
+    },
+    {
+     "level": 4,
+     "s": 1.0875,
+     "TH_target": 110.10937499999999,
+     "TH_ss_DES": 110.3162179085786,
+     "TH_8h_DES": 110.25,
+     "N_8h": 882,
+     "E_DES_Wh": 5560.431877394654,
+     "E_target_Wh": 6450.6382,
+     "aux_W": 111.27579032566825
+    },
+    {
+     "level": 5,
+     "s": 1.075,
+     "TH_target": 108.84375,
+     "TH_ss_DES": 109.04821540388225,
+     "TH_8h_DES": 109.125,
+     "N_8h": 873,
+     "E_DES_Wh": 5561.647906976754,
+     "E_target_Wh": 6673.0740000000005,
+     "aux_W": 138.92826162790584
+    }
+   ],
+   "note": "TH_ss_DES is the periodic cycle rate (continuous); TH_8h_DES = completed products / 8 h is quantised by batches of 9 products, so it can differ from the target by up to one batch."
+  }
+ },
+ "strategies": {
+  "manual_fallback": {
+   "enabled": true,
+   "resources": [
+    "UR10",
+    "UR3e",
+    "FANUC"
+   ],
+   "switch_over_s": 300.0,
+   "manual_time_factor": 1.2,
+   "operator": "one dedicated fallback operator (capacity 1, 0 W); collaborative tasks (station operator already present) use their station operator",
+   "manual_time_source": {
+    "ws6_ur10_load_two_trays": "DV2_L1",
+    "ws8_ur10_unload_three_trays": "DV7_L1",
+    "ws4_ur3e_assembly": "DV4_L1",
+    "fanuc_conveyor_sequence": "DV5_L1",
+    "fanuc_input_transfer": "ratio:DV2_L1/ws6_ur10_load_two_trays",
+    "ws6_sync_retrieve_fanuc_tray": "ratio:DV2_L1/ws6_ur10_load_two_trays"
+   },
+   "note": "Manual time = calibrated level-1 manual task time (alternatives_calibration.json) x manual_time_factor / s(DV10). The two UR10 transfer tasks without a manual DV alternative use the manual/automated ratio of the WS6 tray loading. Workstation equipment of the manual alternative draws its calibrated active power during fallback work. Robot repositioning and wake-ups are skipped while the robot is down and its task is done manually. A task started manually is finished manually even if the robot is restored meanwhile. No fallback for a failed shuttle (lifting it off the track is not modelled)."
+  },
+  "ramp_up": {
+   "enabled": true,
+   "resources": [
+    "UR10",
+    "UR3e",
+    "FANUC",
+    "Shuttle"
+   ],
+   "profile": "smoothstep",
+   "c0": 0.5,
+   "duration_min_s": 300.0,
+   "duration_fraction_of_outage": 0.2,
+   "note": "After restoration the resource works at c(t) = c0 + (1 - c0) S((t - t_rest)/T), S(x) = 3x^2 - 2x^3, T = max(300 s, 0.2 x outage) (same shape and duration rule as case study 1). Energy: constant active power during slowed work (longer wall time)."
+  },
+  "catch_up": {
+   "enabled": true,
+   "speed_factor": 1.15,
+   "energy_exponent": 2.0,
+   "eligible": "segments whose resources are all machines (robots, FANUC cell/conveyor, UR3e_WS9) and shuttle travel; tasks with a human are not sped up",
+   "activation": "from every breakdown; ends when no resource is down, the disrupted count is not below the plan and the latest disrupted batch was completed no later than the plan reached the same count; re-arms whenever the line falls behind again",
+   "demand": "the design's own nominal plan (DS0 cumulative production); no overtime (8-h shift)",
+   "note": "Active power x speed_factor^energy_exponent while sped up (+32 %); the DES energy table charges active_W over the shorter wall time, the remainder is added as catch-up energy.",
+   "termination": "time_lag",
+   "termination_options": {
+    "count": "UMDA 2.0 rule: catch-up ends at the first decision point with no resource down and N_dis(t) >= N_nom(t); can leave a phase lag of up to one batch",
+    "time_lag": "catch-up ends at the first decision point with no resource down and the latest disrupted batch completed no later than the nominal plan reached the same cumulative count (time lag <= 0)"
+   }
+  }
+ },
+ "resilience": {
+  "R_phi": {
+   "performance": "phi(t) = cumulative production relative to the nominal plan; backlog B(t) = N_nom(t) - N_dis(t), both linearly interpolated between batch completions",
+   "formula": "episode: R = 1 - [B(t_f) - B(t_e)] / L, L = max_{t in [t_e, t_f]} B(t) - B(t_e), clipped to [0, 1]; scenario: sum(L - D) / sum(L) over episodes (D = clipped B(t_f) - B(t_e)); R = 1 if sum(L) < L_min",
+   "t_f_offset_s": 1800.0,
+   "t_f_offsets_stability_s": [
+    900.0,
+    1800.0,
+    2700.0
+   ],
+   "L_min_products": 1.0,
+   "episode_end": "t_f = min(t_restored + offset, next failure time, 8 h)"
+  },
+  "reporting_metrics_convention": "UMDA 1.1 principal convention: W = 30 min trailing window, tau = 40 min, steady reference, event approach (cs2_mdo/umda11/metrics.py, unchanged)"
+ },
+ "acceptance": {
+  "defined_share_min": 0.95,
+  "saturation_share_max": 0.5,
+  "ci_halfwidth_max": 0.02,
+  "ci_N_max": 50,
+  "kendall_tau_min": 0.7,
+  "physical_consistency": "R_phi decreases with the restoration duration (within design and scenario) and increases with the strategies (with vs without)"
+ }
+}

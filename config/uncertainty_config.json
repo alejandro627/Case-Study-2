@@ -1,0 +1,329 @@
+{
+  "meta": {
+    "version": "UDES 1.1",
+    "date": "2026-11-15",
+    "scenario_set": "CS2-DS-v2 (DS0-DS15, complete matrix of the four elementary disruptions)",
+    "supersedes": "UDES 1.0 (scenario set CS2-DS-v1: DS0-DS8, FANUC breakdown at hour 2). Scenario IDs are not comparable between the two sets.",
+    "revision_UDES_1_1": "FANUC breakdown at hour 3; scenarios DS0-DS15 (all 16 subsets of the four elementary disruptions, each at its own time); recovery observation window 15 min, tolerance 5 %, persistence 15 min",
+    "applies_to": "CS2 Transfer Line 3.0, DES v10.0, MDA 1.4 (six disciplines), DV table v1.4",
+    "status": "preliminary engineering assumptions (restoration-time distributions, DV10 and flexibility coefficients); not measured",
+    "modelling_decisions": [
+      "interruption policy: preempt-resume",
+      "breakdown-state power: idle power of the failed resource",
+      "shuttle failure: the shuttle stops at its position; no bypass",
+      "FANUC breakdown at hour 3; scenario matrix DS0-DS15; recovery window 15 min, tolerance 5 %, persistence 15 min; R_N, D_N and P(R_N >= 0.96) are the principal resilience responses; system-level recovery time is diagnostic only (not a UMDO objective until its robustness is shown); manual alternatives are not penalised for breakdowns of robots they do not use (model limitation, reported)"
+    ]
+  },
+  "simulation_mode_default": "deterministic",
+  "simulation_modes": {
+    "deterministic": "original nine-DV DES v10.0; no breakdowns, no restoration sampling, DV10 not part of the design vector",
+    "uncertain": "ten-DV design vector (DV10 added); breakdown events of the selected scenario; design-dependent restoration times"
+  },
+  "reference_design": {
+    "DV1": 1,
+    "DV2": 3,
+    "DV3": 1,
+    "DV4": 3,
+    "DV5": 3,
+    "DV6": 1,
+    "DV7": 3,
+    "DV8": 2,
+    "DV9": 1,
+    "DV10": 1
+  },
+  "dv10": {
+    "name": "Maintenance policy level",
+    "applies_to": "all four restoration-time distributions (initial model)",
+    "levels": {
+      "1": {
+        "label": "Corrective / minimal preventive maintenance",
+        "k": 1.0
+      },
+      "2": {
+        "label": "Periodic preventive maintenance",
+        "k": 0.97
+      },
+      "3": {
+        "label": "Condition-based maintenance",
+        "k": 0.92
+      },
+      "4": {
+        "label": "Predictive maintenance",
+        "k": 0.85
+      },
+      "5": {
+        "label": "Fully proactive maintenance",
+        "k": 0.8
+      }
+    },
+    "note": "DV10 changes only restoration durations. No DV10 throughput or energy coefficient is applied; planned preventive-maintenance time is not modelled."
+  },
+  "flexibility_coefficients": {
+    "DV2": {
+      "resource": "UR10",
+      "label": "Tray-loading flexibility",
+      "levels": {
+        "1": 1.0,
+        "2": 0.98,
+        "3": 0.96
+      }
+    },
+    "DV4": {
+      "resource": "UR3e",
+      "label": "WS4 assembly flexibility",
+      "levels": {
+        "1": 1.0,
+        "2": 0.98,
+        "3": 0.96
+      }
+    },
+    "DV5": {
+      "resource": "FANUC",
+      "label": "FANUC assembly flexibility",
+      "levels": {
+        "1": 1.0,
+        "2": 0.98,
+        "3": 0.96
+      }
+    },
+    "DV7": {
+      "resource": "UR10",
+      "label": "Finished-product dispatch flexibility",
+      "levels": {
+        "1": 1.0,
+        "2": 0.98,
+        "3": 0.96
+      }
+    },
+    "ur10_combination": "min",
+    "note": "Level 3 includes fault diagnosis and equipment restart; level 2 guided support and adaptive assistance. For UR10 the stronger of DV2 and DV7 is applied once (min), never their product."
+  },
+  "restoration_time": {
+    "distribution": "truncated_normal",
+    "truncation": "lower bound 0 (positive durations only), no upper bound",
+    "parameter_interpretation": "underlying_normal",
+    "parameter_interpretation_note": "mean_min and sd_min are the parameters of the underlying normal distribution before truncation, NOT the moments of the truncated distribution (the truncated mean is slightly larger, e.g. RT_sh: 7.08 min instead of 7).",
+    "scaling": "mean_and_sd",
+    "scaling_options": {
+      "mean_and_sd": "mu_j(z) = mu_ref * K_j(z), sigma_j(z) = sigma_ref * K_j(z) (primary model)",
+      "mean_only": "mu_j(z) = mu_ref * K_j(z), sigma_j(z) = sigma_ref (sensitivity option, not default)"
+    },
+    "includes": "diagnosis, repair/reset and restart of the resource; NOT the system-level time to recovery",
+    "variables": {
+      "RT_UR10": {
+        "resource": "UR10",
+        "mean_min": 18,
+        "sd_min": 5,
+        "stream": 1
+      },
+      "RT_sh": {
+        "resource": "Shuttle",
+        "mean_min": 7,
+        "sd_min": 3,
+        "stream": 2
+      },
+      "RT_UR3e": {
+        "resource": "UR3e",
+        "mean_min": 10,
+        "sd_min": 4,
+        "stream": 3
+      },
+      "RT_F": {
+        "resource": "FANUC",
+        "mean_min": 15,
+        "sd_min": 4,
+        "stream": 4
+      }
+    },
+    "dependence": "independent (initial modelling assumption, not empirically established)"
+  },
+  "disruptions": {
+    "failed_shuttle_id": 1,
+    "events": {
+      "UR10_h1": {
+        "resource": "UR10",
+        "time_h": 1,
+        "source": "controlled validation schedule"
+      },
+      "Shuttle_h4": {
+        "resource": "Shuttle",
+        "time_h": 4,
+        "source": "controlled validation schedule"
+      },
+      "UR3e_h6": {
+        "resource": "UR3e",
+        "time_h": 6,
+        "source": "controlled validation schedule (UR3e at WS4)"
+      },
+      "FANUC_h3": {
+        "resource": "FANUC",
+        "time_h": 3,
+        "source": "CS2 scenario matrix (UDES 1.1)"
+      }
+    },
+    "scenarios": {
+      "DS0": {
+        "events": [],
+        "description": "no disruption (nominal reference)"
+      },
+      "DS1": {
+        "events": [
+          "UR10_h1"
+        ],
+        "description": "UR10 (h1)"
+      },
+      "DS2": {
+        "events": [
+          "Shuttle_h4"
+        ],
+        "description": "Shuttle (h4)"
+      },
+      "DS3": {
+        "events": [
+          "UR3e_h6"
+        ],
+        "description": "UR3e (h6)"
+      },
+      "DS4": {
+        "events": [
+          "FANUC_h3"
+        ],
+        "description": "FANUC (h3)"
+      },
+      "DS5": {
+        "events": [
+          "UR10_h1",
+          "Shuttle_h4"
+        ],
+        "description": "UR10 + Shuttle"
+      },
+      "DS6": {
+        "events": [
+          "Shuttle_h4",
+          "UR3e_h6"
+        ],
+        "description": "Shuttle + UR3e"
+      },
+      "DS7": {
+        "events": [
+          "UR10_h1",
+          "UR3e_h6"
+        ],
+        "description": "UR10 + UR3e"
+      },
+      "DS8": {
+        "events": [
+          "UR10_h1",
+          "FANUC_h3"
+        ],
+        "description": "UR10 + FANUC"
+      },
+      "DS9": {
+        "events": [
+          "Shuttle_h4",
+          "FANUC_h3"
+        ],
+        "description": "Shuttle + FANUC"
+      },
+      "DS10": {
+        "events": [
+          "UR3e_h6",
+          "FANUC_h3"
+        ],
+        "description": "UR3e + FANUC"
+      },
+      "DS11": {
+        "events": [
+          "UR10_h1",
+          "Shuttle_h4",
+          "UR3e_h6"
+        ],
+        "description": "UR10 + Shuttle + UR3e"
+      },
+      "DS12": {
+        "events": [
+          "UR10_h1",
+          "Shuttle_h4",
+          "FANUC_h3"
+        ],
+        "description": "UR10 + Shuttle + FANUC"
+      },
+      "DS13": {
+        "events": [
+          "UR10_h1",
+          "UR3e_h6",
+          "FANUC_h3"
+        ],
+        "description": "UR10 + UR3e + FANUC"
+      },
+      "DS14": {
+        "events": [
+          "Shuttle_h4",
+          "UR3e_h6",
+          "FANUC_h3"
+        ],
+        "description": "Shuttle + UR3e + FANUC"
+      },
+      "DS15": {
+        "events": [
+          "UR10_h1",
+          "Shuttle_h4",
+          "UR3e_h6",
+          "FANUC_h3"
+        ],
+        "description": "all four disruptions"
+      }
+    },
+    "scenario_id_mapping_from_UDES_1_0": {
+      "DS0": "DS0",
+      "DS1": "DS1",
+      "DS2": "DS2",
+      "DS3": "DS3",
+      "DS4": "DS5",
+      "DS5": "DS6",
+      "DS6": "DS7",
+      "DS7": "DS11",
+      "DS8": "none (FANUC at hour 2; FANUC is now at hour 3, DS4)"
+    },
+    "interruption_policy": "preempt_resume",
+    "interruption_policy_note": "a task in progress on a failed resource stops at the breakdown time and resumes with its remaining duration after restoration; no new task starts on a failed resource; material stays on its tray (no loss, no duplication)",
+    "shuttle_failure": "stop_at_position",
+    "shuttle_failure_note": "the failed shuttle finishes the hop in progress and then holds its track position until restored; it keeps its FIFO place (and reservation) for the next position, so no shuttle behind it can overtake it, also not in the WS5 buffer; station operations on its trays continue; the track has no bypass, so other shuttles queue behind it",
+    "ur3e_scope": "UR3e = the WS4 UR3e; the optional UR3e_WS9 (DV3 levels 2-3) is not a failure target in UDES 1.0"
+  },
+  "breakdown_power": {
+    "basis": "idle_power",
+    "factor_of_idle_W": 1.0,
+    "note": "while down, the failed resource draws factor * idle_W (UR10 50 W, UR3e 50 W, FANUC cell 100 W, shuttle 5 W). Down time is never counted as DV9 standby."
+  },
+  "recovery": {
+    "horizon_s": 28800,
+    "grid_step_s": 60,
+    "rate_window_s": 900,
+    "rate_window_alignment": "centred",
+    "rate_window_alignment_options": {
+      "centred": "r(t) = 3600 [N(t + W/2) - N(t - W/2)] / W (post-hoc analysis; no lag)",
+      "trailing": "r(t) = 3600 [N(t) - N(t - W)] / W (causal monitoring; recovery times include a lag of about W)"
+    },
+    "relative_tolerance": 0.05,
+    "min_band_batches_per_window": 1,
+    "persistence_s": 900,
+    "end_of_shift_threshold": 0.96,
+    "principal_resilience_responses": [
+      "R_N",
+      "D_N",
+      "P(R_N >= 0.96)"
+    ],
+    "diagnostic_only": [
+      "system-level recovery time (not a UMDO objective until its robustness is demonstrated)"
+    ],
+    "note": "In band if |r - r_nom| <= max(tol * r_nom, min_band_batches_per_window * batch / W). N(t) moves in whole batches of 9 products: with W = 15 min one batch per window is 36 products/h, so the 5 % tolerance is below the resolution of the rate and the batch floor sets the effective band (set min_band_batches_per_window = 0 to use the pure 5 % band). Recovery = first time after a detected degradation from which the rate stays in band for the persistence window."
+  },
+  "random": {
+    "base_seed": 20261115,
+    "replications_default": 30,
+    "stream_construction": "numpy PCG64 from SeedSequence([base_seed, replication, stream]); one stream per restoration variable",
+    "common_random_numbers": "the k-th breakdown of a variable in replication r uses the same uniform number in every design and scenario; with mean_and_sd scaling the sampled duration is exactly K_j(z) * (reference duration)",
+    "sampling": "inverse CDF of the truncated normal (one uniform number per breakdown)"
+  }
+}

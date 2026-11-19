@@ -1,0 +1,34 @@
+DV,level,description,TH_products_per_h,TH_coeff,E_kWh_8h,E_coeff,K_UR10,K_shuttle,K_UR3e,K_FANUC,mean_UR10_min,sd_UR10_min,mean_shuttle_min,sd_shuttle_min,mean_UR3e_min,sd_UR3e_min,mean_FANUC_min,sd_FANUC_min
+1,1,One active shuttle,101.25,1,5.560895000000001,1,1,1,1,1,18,5,7,3,10,4,15,4
+1,2,Two active shuttles,173.25,1.711111111111111,7.190006950657518,1.2929585886188315,1,1,1,1,18,5,7,3,10,4,15,4
+1,3,Three active shuttles,195.75,1.9333333333333333,7.723195342820374,1.3888403472499251,1,1,1,1,18,5,7,3,10,4,15,4
+2,1,Fully manual tray loading,95.175,0.94,5.305093830000001,0.954,1,1,1,1,18,5,7,3,10,4,15,4
+2,2,"Collaborative robot-assisted tray loading (include guided support, reconfigurability/adaptive assistance)",98.21249999999999,0.97,5.477481575000001,0.985,0.98,1,1,1,17.64,4.9,7,3,10,4,15,4
+2,3,"Fully automated and reconfigurable tray loading (include smart, reconfigurability/adaptive assistance)",101.25,1,5.560895000000001,1,0.96,1,1,1,17.28,4.8,7,3,10,4,15,4
+3,1,Fully manual workpiece setup,101.25,1,5.560895000000001,1,1,1,1,1,18,5,7,3,10,4,15,4
+3,2,"Collaborative robot-assisted workpiece setup (include guided support, reconfigurability/adaptive assistance)",103.275,1.02,5.638747530000002,1.014,1,1,1,1,18,5,7,3,10,4,15,4
+3,3,"Fully automated and flexible workpiece setup (include Smart, reconfigurability/adaptive assistance)",105.3,1.04,5.683234690000002,1.022,1,1,1,1,18,5,7,3,10,4,15,4
+4,1,Fully manual assembly,93.15,0.92,5.2606066700000005,0.946,1,1,1,1,18,5,7,3,10,4,15,4
+4,2,"Collaborative robot-assisted assembly (include guided support, reconfigurability/adaptive assistance)",98.21249999999999,0.97,5.477481575000001,0.985,1,1,0.98,1,18,5,7,3,9.8,3.92,15,4
+4,3,"Fully automated and reconfigurable assembly (include Smart, reconfigurability/adaptive assistance)",101.25,1,5.560895000000001,1,1,1,0.96,1,18,5,7,3,9.6,3.84,15,4
+5,1,Fully manual assembly,95.175,0.94,5.116023400000001,0.92,1,1,1,1,18,5,7,3,10,4,15,4
+5,2,"Collaborative robot-assisted assembly (include guided support, reconfigurability/adaptive assistance)",99.225,0.98,5.427433520000001,0.976,1,1,1,0.98,18,5,7,3,10,4,14.7,3.92
+5,3,"Fully automated and reconfigurable assembly (include Smart, reconfigurability/adaptive assistance)",101.25,1,5.560895000000001,1,1,1,1,0.96,18,5,7,3,10,4,14.399999999999999,3.84
+6,1,Basic inspection assistance,101.25,1,5.560895000000001,1,1,1,1,1,18,5,7,3,10,4,15,4
+6,2,Guided inspection assistance,102.36375,1.011,5.616503950000001,1.01,1,1,1,1,18,5,7,3,10,4,15,4
+6,3,"Smart, adaptive inspection assistance",103.68,1.024,5.727721850000002,1.03,1,1,1,1,18,5,7,3,10,4,15,4
+7,1,Fully manual finished-product dispatch,96.1875,0.95,5.310654725000001,0.955,1,1,1,1,18,5,7,3,10,4,15,4
+7,2,"Collaborative robot-assisted finished-product dispatch (include guided support, reconfigurability/adaptive assistance)",99.225,0.98,5.510846945000001,0.991,0.98,1,1,1,17.64,4.9,7,3,10,4,15,4
+7,3,"Fully automated and flexible finished-product dispatch (include Smart, reconfigurability/adaptive assistance)",101.25,1,5.560895000000001,1,0.96,1,1,1,17.28,4.8,7,3,10,4,15,4
+8,1,Low inspection,104.49000000000001,1.032,5.627625740000001,1.012,1,1,1,1,18,5,7,3,10,4,15,4
+8,2,Moderate inspection,101.25,1,5.560895000000001,1,1,1,1,1,18,5,7,3,10,4,15,4
+8,3,Full inspection,95.88374999999999,0.947,5.460798890000001,0.982,1,1,1,1,18,5,7,3,10,4,15,4
+9,1,Standard powered operation,101.25,1,5.560895000000001,1,1,1,1,1,18,5,7,3,10,4,15,4
+9,2,Reduced idle-power operation,95.175,0.94,5.394068150000001,0.97,1,1,1,1,18,5,7,3,10,4,15,4
+9,3,Inactivity-triggered standby/sleep operation,92.1375,0.91,5.227241300000001,0.94,1,1,1,1,18,5,7,3,10,4,15,4
+9,4,State-dependent adaptive energy management,87.075,0.86,5.116023400000001,0.92,1,1,1,1,18,5,7,3,10,4,15,4
+10,1,Corrective (minimal preventive),101.25,1,5.560895000000001,1,1,1,1,1,18,5,7,3,10,4,15,4
+10,2,Periodic maintenance,103.78124999999999,1.025,5.894548700000001,1.06,0.97,0.97,0.97,0.97,17.46,4.85,6.79,2.91,9.7,3.88,14.549999999999999,3.88
+10,3,Condition-based,107.578125,1.0625,6.172593450000002,1.11,0.92,0.92,0.92,0.92,16.560000000000002,4.6000000000000005,6.44,2.7600000000000002,9.200000000000001,3.68,13.8,3.68
+10,4,Predictive maintenance,110.10937499999999,1.0875,6.450638200000001,1.16,0.85,0.85,0.85,0.85,15.299999999999999,4.25,5.95,2.55,8.5,3.4,12.75,3.4
+10,5,Fully proactive maintenance,108.84375,1.075,6.6730740000000015,1.2,0.8,0.8,0.8,0.8,14.4,4,5.6000000000000005,2.4000000000000004,8,3.2,12,3.2
