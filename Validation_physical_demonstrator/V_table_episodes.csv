@@ -1,0 +1,9 @@
+id,phase,loop,resource,origin,t_fail_loop,t_rest_loop,anchor,anchor_offset,outage_s,slack_des_s
+E1,P2,2,UR3e,injected disruption (note 33: UR3e breakdown),108.56688799999995,712.519758,ur3e,0.05606199999995454,603.9528700000001,0.0
+E2,P2,2,FANUC,controller fault at the same instant (note 26: FANUC did not start),110.052888,712.420699,fanuc,57.446867,602.3678110000001,42.309999999999974
+E3,P2,2,UR10,UR10 fault while waiting (notes 28-32: robot stopped / goal not reached),790.1098880000001,3459.634834,after:E1,681.5430000000001,2669.524946,0.0
+E4,P2,3,FANUC,injected disruption (note 34: FANUC disruption),59.36368200000015,265.562172,fanuc,7.98649100000015,206.19848999999982,42.309999999999974
+E5,P3,9,FANUC cell conveyor,conveyor did not complete its run (note 16; line not stopped),191.6549699999996,191.6549699999996,,0.0,0.0,
+E6,P3,10,UR10,injected disruption (note 18: disruption with UR10),256.3744889999998,492.807542,unload_third,0.0,236.4330530000002,0.0
+E7,P3,11,FANUC,blister badly placed on the cell (note 17); operator intervention,59.873513,296.483401,fanuc,7.933908000000002,236.609888,42.309999999999974
+E7s,P3,11,Shuttle,shuttle held at WS9 while the operator recovered the cell,75.99884,296.46458,setup_end,0.0,220.46574,0.0

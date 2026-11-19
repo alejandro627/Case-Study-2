@@ -1,0 +1,4 @@
+note_id,run_id,sequence_name,timestamp,seconds_from_run_start,loop_iteration,task_id,task_label,seconds_from_task_start,note_type,note_type_label,entity_id,text,parameter,old_value,new_value,error_code,component,line_stopped,action
+16,d6d0bdcb,Parallel Fanuc + UR3 test,2026-11-11T17:01:33.721332+00:00,4755.288,9,Move Blister AAS to S6-UR10-1793958508448,Move Blister AAS to S6,15.174,failure,Failure,AAS,conveyor did not complete the run,,,,,,FALSE,
+18,d6d0bdcb,Parallel Fanuc + UR3 test,2026-11-11T17:08:08.219987+00:00,5149.787,10,Move Blister S8 to WH-UR10-1793958663509,Move Blister S8 to WH,16.801,disruption,Disruption,UR10,Disruption with UR10,,,,,,,
+17,d6d0bdcb,Parallel Fanuc + UR3 test,2026-11-11T17:14:32.064497+00:00,5533.632,11,Unload Blister-Fanuc-1793379243610,Unload Blister,-230.871,error,Error report,AAS,Blister was badly placed on the AAS,,,,,,,

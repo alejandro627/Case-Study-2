@@ -1,0 +1,140 @@
+{
+ "performance": {
+  "DES_cycle_s": 319.4,
+  "DES_TH_rate": 101.44020037570445,
+  "DES_TH_8h": 101.25,
+  "P1_loops": 15,
+  "P1_mean_loop_s": 368.3558458666667,
+  "P1_median_loop_s": 347.02167000000003,
+  "P1_min_loop_s": 308.450923,
+  "P1_max_loop_s": 503.44053599999995,
+  "P1_mean_replay_s": 334.1134133333333,
+  "P1_mean_replay_DEShuman_s": 316.09826666666663,
+  "P1_mean_residual_s": 34.24243253333332,
+  "P1_clean_loops": 10,
+  "clean_loops_all": 19,
+  "clean_mean_abs_residual_s": 0.8656887368420957,
+  "clean_max_abs_residual_s": 1.0362700000000586,
+  "clean_mean_loop_s": 329.75753084210527,
+  "clean_mean_replay_s": 328.8918421052632,
+  "replay_r": -0.03265780335634988,
+  "restart_gap_s": 12.665520999999899,
+  "handover_s": 0.064553999999994,
+  "P1_period_s": 381.0213668666666,
+  "P1_TH": 85.03460125200263,
+  "clean_period_s": 342.42305184210517,
+  "clean_TH": 94.61979801213843,
+  "P1_dTH_pct": -16.172680123797413,
+  "clean_dTH_pct": -6.723569490503046,
+  "wf_robots_transport_s": -3.3017333333333454,
+  "wf_human_s": 18.01514666666668,
+  "wf_microstops_s": 34.242432533333385
+ },
+ "refs": {
+  "P2": 333.789418,
+  "P3": 321.358165
+ },
+ "restart_gap_s": 12.665520999999899,
+ "slack_fanuc_s": 42.309999999999974,
+ "setup_ref_P3_s": 16.536021,
+ "hold_E7_s": 220.46574,
+ "replay_events": {
+  "P2_off": [
+   {
+    "id": "E1",
+    "resource": "UR3e",
+    "t_des": 421.436062,
+    "outage_s": 603.9528700000001
+   },
+   {
+    "id": "E2",
+    "resource": "FANUC",
+    "t_des": 431.46686700000004,
+    "outage_s": 602.3678110000001
+   },
+   {
+    "id": "E3",
+    "resource": "UR10",
+    "t_des": 1102.979062,
+    "outage_s": 2669.524946
+   },
+   {
+    "id": "E4",
+    "resource": "FANUC",
+    "t_des": 3974.884307,
+    "outage_s": 206.19848999999982
+   }
+  ],
+  "P2_on": [
+   {
+    "id": "E1",
+    "resource": "UR3e",
+    "t_des": 421.436062,
+    "outage_s": 603.9528700000001
+   },
+   {
+    "id": "E2",
+    "resource": "FANUC",
+    "t_des": 431.46686700000004,
+    "outage_s": 602.3678110000001
+   },
+   {
+    "id": "E3",
+    "resource": "UR10",
+    "t_des": 1102.979062,
+    "outage_s": 2669.524946
+   },
+   {
+    "id": "E4",
+    "resource": "FANUC",
+    "t_des": 1063.6311604409138,
+    "outage_s": 206.19848999999982
+   }
+  ],
+  "P3_off": [
+   {
+    "id": "E6",
+    "resource": "UR10",
+    "t_des": 888.1933333333335,
+    "outage_s": 236.4330530000002
+   },
+   {
+    "id": "E7",
+    "resource": "FANUC",
+    "t_des": 1257.1869610000003,
+    "outage_s": 236.609888
+   },
+   {
+    "id": "E7s",
+    "resource": "Shuttle",
+    "t_des": 1274.9030530000005,
+    "outage_s": 220.46574
+   }
+  ],
+  "P3_on": [
+   {
+    "id": "E6",
+    "resource": "UR10",
+    "t_des": 888.1933333333335,
+    "outage_s": 236.4330530000002
+   },
+   {
+    "id": "E7",
+    "resource": "FANUC",
+    "t_des": 1277.2606543038805,
+    "outage_s": 236.609888
+   },
+   {
+    "id": "E7s",
+    "resource": "Shuttle",
+    "t_des": 1294.9767463038804,
+    "outage_s": 220.46574
+   }
+  ]
+ },
+ "interruption_P3": {
+  "after_loop": 7,
+  "gap_s": 1959.517089,
+  "loop7_tasks": 29
+ }
+}

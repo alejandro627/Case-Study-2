@@ -1,0 +1,4 @@
+phase,date,loops,complete_loops,tasks,products,duration_min,notes,note_types
+P1,2026-11-10,15,15,465,135,95.04424969999998,1,observation 1
+P2,2026-11-12,3,3,93,27,74.16946771666666,9,"error 7, disruption 2"
+P3,2026-11-11,11,10,339,90,100.00385776666667,3,"failure 1, disruption 1, error 1"
