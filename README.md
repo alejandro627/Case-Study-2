@@ -1,4 +1,4 @@
-# Case Study 2 – Resilience-oriented design of the Transfer Line 3.0 CPPS
+# Case Study 2 – Resilience-oriented design of the Transfer Line CPPS
 
 Python implementation of Case Study 2 of the doctoral thesis "Sustainability-oriented optimization of modular and reconfigurable cyber-physical production systems: A Complexity-engineering-based framework for resilience". The case study applies a
 complexity-engineering-based design framework to the Montrac Transfer Line 3.0 of the Smart Mini Factory (SMF)
