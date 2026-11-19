@@ -1,0 +1,13 @@
+{
+  "evaluated_now": 26244,
+  "wall_time_s": 1940.2356212000013,
+  "workers": 10,
+  "complete": true,
+  "n_records": 26244,
+  "n_expected": 26244,
+  "duplicates_dropped": 0,
+  "missing": 0,
+  "failed": 0,
+  "infeasible": 0,
+  "unknown_ids": 0
+}

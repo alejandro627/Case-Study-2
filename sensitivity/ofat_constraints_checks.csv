@@ -1,0 +1,505 @@
+reference,design_variable,level,label,is_reference_level,config_id,check,condition,name,type,measured,limit,satisfied
+R0_1shuttle,DV1,1,DV1 L1,True,Z131331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV1,1,DV1 L1,True,Z131331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV1,1,DV1 L1,True,Z131331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV1,1,DV1 L1,True,Z131331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV1,1,DV1 L1,True,Z131331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV1,1,DV1 L1,True,Z131331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV1,1,DV1 L1,True,Z131331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV1,1,DV1 L1,True,Z131331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV1,1,DV1 L1,True,Z131331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,90,>= 1,True
+R0_1shuttle,DV1,2,DV1 L2,False,Z231331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV1,2,DV1 L2,False,Z231331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV1,2,DV1 L2,False,Z231331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV1,2,DV1 L2,False,Z231331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV1,2,DV1 L2,False,Z231331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV1,2,DV1 L2,False,Z231331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV1,2,DV1 L2,False,Z231331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV1,2,DV1 L2,False,Z231331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV1,2,DV1 L2,False,Z231331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,155,>= 1,True
+R0_1shuttle,DV1,3,DV1 L3,False,Z331331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV1,3,DV1 L3,False,Z331331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV1,3,DV1 L3,False,Z331331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV1,3,DV1 L3,False,Z331331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV1,3,DV1 L3,False,Z331331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV1,3,DV1 L3,False,Z331331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV1,3,DV1 L3,False,Z331331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV1,3,DV1 L3,False,Z331331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV1,3,DV1 L3,False,Z331331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,117,>= 1,True
+R0_1shuttle,DV2,1,DV2 L1,False,Z111331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV2,1,DV2 L1,False,Z111331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV2,1,DV2 L1,False,Z111331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV2,1,DV2 L1,False,Z111331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV2,1,DV2 L1,False,Z111331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV2,1,DV2 L1,False,Z111331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV2,1,DV2 L1,False,Z111331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV2,1,DV2 L1,False,Z111331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV2,1,DV2 L1,False,Z111331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,85,>= 1,True
+R0_1shuttle,DV2,2,DV2 L2,False,Z121331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV2,2,DV2 L2,False,Z121331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV2,2,DV2 L2,False,Z121331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV2,2,DV2 L2,False,Z121331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV2,2,DV2 L2,False,Z121331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV2,2,DV2 L2,False,Z121331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV2,2,DV2 L2,False,Z121331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV2,2,DV2 L2,False,Z121331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV2,2,DV2 L2,False,Z121331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,87,>= 1,True
+R0_1shuttle,DV2,3,DV2 L3,True,Z131331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV2,3,DV2 L3,True,Z131331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV2,3,DV2 L3,True,Z131331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV2,3,DV2 L3,True,Z131331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV2,3,DV2 L3,True,Z131331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV2,3,DV2 L3,True,Z131331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV2,3,DV2 L3,True,Z131331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV2,3,DV2 L3,True,Z131331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV2,3,DV2 L3,True,Z131331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,90,>= 1,True
+R0_1shuttle,DV3,1,DV3 L1,True,Z131331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV3,1,DV3 L1,True,Z131331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV3,1,DV3 L1,True,Z131331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV3,1,DV3 L1,True,Z131331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV3,1,DV3 L1,True,Z131331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV3,1,DV3 L1,True,Z131331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV3,1,DV3 L1,True,Z131331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV3,1,DV3 L1,True,Z131331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV3,1,DV3 L1,True,Z131331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,90,>= 1,True
+R0_1shuttle,DV3,2,DV3 L2,False,Z132331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV3,2,DV3 L2,False,Z132331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV3,2,DV3 L2,False,Z132331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV3,2,DV3 L2,False,Z132331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV3,2,DV3 L2,False,Z132331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV3,2,DV3 L2,False,Z132331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV3,2,DV3 L2,False,Z132331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV3,2,DV3 L2,False,Z132331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV3,2,DV3 L2,False,Z132331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,92,>= 1,True
+R0_1shuttle,DV3,3,DV3 L3,False,Z133331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV3,3,DV3 L3,False,Z133331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV3,3,DV3 L3,False,Z133331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV3,3,DV3 L3,False,Z133331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV3,3,DV3 L3,False,Z133331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV3,3,DV3 L3,False,Z133331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV3,3,DV3 L3,False,Z133331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV3,3,DV3 L3,False,Z133331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV3,3,DV3 L3,False,Z133331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,94,>= 1,True
+R0_1shuttle,DV4,1,DV4 L1,False,Z131131321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV4,1,DV4 L1,False,Z131131321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV4,1,DV4 L1,False,Z131131321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV4,1,DV4 L1,False,Z131131321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV4,1,DV4 L1,False,Z131131321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV4,1,DV4 L1,False,Z131131321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV4,1,DV4 L1,False,Z131131321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV4,1,DV4 L1,False,Z131131321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV4,1,DV4 L1,False,Z131131321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,83,>= 1,True
+R0_1shuttle,DV4,2,DV4 L2,False,Z131231321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV4,2,DV4 L2,False,Z131231321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV4,2,DV4 L2,False,Z131231321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV4,2,DV4 L2,False,Z131231321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV4,2,DV4 L2,False,Z131231321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV4,2,DV4 L2,False,Z131231321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV4,2,DV4 L2,False,Z131231321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV4,2,DV4 L2,False,Z131231321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV4,2,DV4 L2,False,Z131231321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,87,>= 1,True
+R0_1shuttle,DV4,3,DV4 L3,True,Z131331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV4,3,DV4 L3,True,Z131331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV4,3,DV4 L3,True,Z131331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV4,3,DV4 L3,True,Z131331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV4,3,DV4 L3,True,Z131331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV4,3,DV4 L3,True,Z131331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV4,3,DV4 L3,True,Z131331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV4,3,DV4 L3,True,Z131331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV4,3,DV4 L3,True,Z131331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,90,>= 1,True
+R0_1shuttle,DV5,1,DV5 L1,False,Z131311321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV5,1,DV5 L1,False,Z131311321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV5,1,DV5 L1,False,Z131311321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV5,1,DV5 L1,False,Z131311321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV5,1,DV5 L1,False,Z131311321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV5,1,DV5 L1,False,Z131311321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV5,1,DV5 L1,False,Z131311321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV5,1,DV5 L1,False,Z131311321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV5,1,DV5 L1,False,Z131311321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,85,>= 1,True
+R0_1shuttle,DV5,2,DV5 L2,False,Z131321321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV5,2,DV5 L2,False,Z131321321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV5,2,DV5 L2,False,Z131321321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV5,2,DV5 L2,False,Z131321321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV5,2,DV5 L2,False,Z131321321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV5,2,DV5 L2,False,Z131321321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV5,2,DV5 L2,False,Z131321321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV5,2,DV5 L2,False,Z131321321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV5,2,DV5 L2,False,Z131321321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,88,>= 1,True
+R0_1shuttle,DV5,3,DV5 L3,True,Z131331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV5,3,DV5 L3,True,Z131331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV5,3,DV5 L3,True,Z131331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV5,3,DV5 L3,True,Z131331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV5,3,DV5 L3,True,Z131331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV5,3,DV5 L3,True,Z131331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV5,3,DV5 L3,True,Z131331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV5,3,DV5 L3,True,Z131331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV5,3,DV5 L3,True,Z131331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,90,>= 1,True
+R0_1shuttle,DV6,1,DV6 L1,True,Z131331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV6,1,DV6 L1,True,Z131331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV6,1,DV6 L1,True,Z131331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV6,1,DV6 L1,True,Z131331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV6,1,DV6 L1,True,Z131331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV6,1,DV6 L1,True,Z131331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV6,1,DV6 L1,True,Z131331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV6,1,DV6 L1,True,Z131331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV6,1,DV6 L1,True,Z131331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,90,>= 1,True
+R0_1shuttle,DV6,2,DV6 L2,False,Z131332321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV6,2,DV6 L2,False,Z131332321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV6,2,DV6 L2,False,Z131332321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV6,2,DV6 L2,False,Z131332321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV6,2,DV6 L2,False,Z131332321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV6,2,DV6 L2,False,Z131332321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV6,2,DV6 L2,False,Z131332321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV6,2,DV6 L2,False,Z131332321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV6,2,DV6 L2,False,Z131332321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,91,>= 1,True
+R0_1shuttle,DV6,3,DV6 L3,False,Z131333321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV6,3,DV6 L3,False,Z131333321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV6,3,DV6 L3,False,Z131333321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV6,3,DV6 L3,False,Z131333321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV6,3,DV6 L3,False,Z131333321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV6,3,DV6 L3,False,Z131333321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV6,3,DV6 L3,False,Z131333321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV6,3,DV6 L3,False,Z131333321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV6,3,DV6 L3,False,Z131333321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,92,>= 1,True
+R0_1shuttle,DV7,1,DV7 L1,False,Z131331121,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV7,1,DV7 L1,False,Z131331121,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV7,1,DV7 L1,False,Z131331121,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV7,1,DV7 L1,False,Z131331121,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV7,1,DV7 L1,False,Z131331121,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV7,1,DV7 L1,False,Z131331121,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV7,1,DV7 L1,False,Z131331121,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV7,1,DV7 L1,False,Z131331121,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV7,1,DV7 L1,False,Z131331121,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,86,>= 1,True
+R0_1shuttle,DV7,2,DV7 L2,False,Z131331221,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV7,2,DV7 L2,False,Z131331221,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV7,2,DV7 L2,False,Z131331221,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV7,2,DV7 L2,False,Z131331221,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV7,2,DV7 L2,False,Z131331221,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV7,2,DV7 L2,False,Z131331221,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV7,2,DV7 L2,False,Z131331221,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV7,2,DV7 L2,False,Z131331221,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV7,2,DV7 L2,False,Z131331221,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,88,>= 1,True
+R0_1shuttle,DV7,3,DV7 L3,True,Z131331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV7,3,DV7 L3,True,Z131331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV7,3,DV7 L3,True,Z131331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV7,3,DV7 L3,True,Z131331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV7,3,DV7 L3,True,Z131331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV7,3,DV7 L3,True,Z131331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV7,3,DV7 L3,True,Z131331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV7,3,DV7 L3,True,Z131331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV7,3,DV7 L3,True,Z131331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,90,>= 1,True
+R0_1shuttle,DV8,1,DV8 L1,False,Z131331311,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV8,1,DV8 L1,False,Z131331311,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV8,1,DV8 L1,False,Z131331311,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV8,1,DV8 L1,False,Z131331311,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV8,1,DV8 L1,False,Z131331311,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV8,1,DV8 L1,False,Z131331311,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV8,1,DV8 L1,False,Z131331311,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV8,1,DV8 L1,False,Z131331311,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV8,1,DV8 L1,False,Z131331311,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,93,>= 1,True
+R0_1shuttle,DV8,2,DV8 L2,True,Z131331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV8,2,DV8 L2,True,Z131331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV8,2,DV8 L2,True,Z131331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV8,2,DV8 L2,True,Z131331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV8,2,DV8 L2,True,Z131331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV8,2,DV8 L2,True,Z131331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV8,2,DV8 L2,True,Z131331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV8,2,DV8 L2,True,Z131331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV8,2,DV8 L2,True,Z131331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,90,>= 1,True
+R0_1shuttle,DV8,3,DV8 L3,False,Z131331331,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV8,3,DV8 L3,False,Z131331331,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV8,3,DV8 L3,False,Z131331331,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV8,3,DV8 L3,False,Z131331331,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV8,3,DV8 L3,False,Z131331331,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV8,3,DV8 L3,False,Z131331331,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV8,3,DV8 L3,False,Z131331331,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV8,3,DV8 L3,False,Z131331331,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV8,3,DV8 L3,False,Z131331331,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,85,>= 1,True
+R0_1shuttle,DV9,1,DV9 L1,True,Z131331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV9,1,DV9 L1,True,Z131331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV9,1,DV9 L1,True,Z131331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV9,1,DV9 L1,True,Z131331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV9,1,DV9 L1,True,Z131331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV9,1,DV9 L1,True,Z131331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV9,1,DV9 L1,True,Z131331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV9,1,DV9 L1,True,Z131331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV9,1,DV9 L1,True,Z131331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,90,>= 1,True
+R0_1shuttle,DV9,2,DV9 L2,False,Z131331322,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV9,2,DV9 L2,False,Z131331322,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV9,2,DV9 L2,False,Z131331322,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV9,2,DV9 L2,False,Z131331322,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV9,2,DV9 L2,False,Z131331322,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV9,2,DV9 L2,False,Z131331322,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV9,2,DV9 L2,False,Z131331322,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV9,2,DV9 L2,False,Z131331322,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV9,2,DV9 L2,False,Z131331322,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,85,>= 1,True
+R0_1shuttle,DV9,3,DV9 L3,False,Z131331323,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV9,3,DV9 L3,False,Z131331323,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV9,3,DV9 L3,False,Z131331323,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV9,3,DV9 L3,False,Z131331323,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV9,3,DV9 L3,False,Z131331323,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV9,3,DV9 L3,False,Z131331323,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV9,3,DV9 L3,False,Z131331323,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV9,3,DV9 L3,False,Z131331323,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV9,3,DV9 L3,False,Z131331323,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,82,>= 1,True
+R0_1shuttle,DV9,4,DV9 L4,False,Z131331324,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_1shuttle,DV9,4,DV9 L4,False,Z131331324,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_1shuttle,DV9,4,DV9 L4,False,Z131331324,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_1shuttle,DV9,4,DV9 L4,False,Z131331324,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_1shuttle,DV9,4,DV9 L4,False,Z131331324,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_1shuttle,DV9,4,DV9 L4,False,Z131331324,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_1shuttle,DV9,4,DV9 L4,False,Z131331324,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_1shuttle,DV9,4,DV9 L4,False,Z131331324,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_1shuttle,DV9,4,DV9 L4,False,Z131331324,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,78,>= 1,True
+R0_3shuttles,DV1,1,DV1 L1,False,Z131331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV1,1,DV1 L1,False,Z131331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV1,1,DV1 L1,False,Z131331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV1,1,DV1 L1,False,Z131331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV1,1,DV1 L1,False,Z131331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV1,1,DV1 L1,False,Z131331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV1,1,DV1 L1,False,Z131331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV1,1,DV1 L1,False,Z131331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV1,1,DV1 L1,False,Z131331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,90,>= 1,True
+R0_3shuttles,DV1,2,DV1 L2,False,Z231331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV1,2,DV1 L2,False,Z231331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV1,2,DV1 L2,False,Z231331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV1,2,DV1 L2,False,Z231331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV1,2,DV1 L2,False,Z231331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV1,2,DV1 L2,False,Z231331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV1,2,DV1 L2,False,Z231331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV1,2,DV1 L2,False,Z231331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV1,2,DV1 L2,False,Z231331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,155,>= 1,True
+R0_3shuttles,DV1,3,DV1 L3,True,Z331331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV1,3,DV1 L3,True,Z331331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV1,3,DV1 L3,True,Z331331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV1,3,DV1 L3,True,Z331331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV1,3,DV1 L3,True,Z331331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV1,3,DV1 L3,True,Z331331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV1,3,DV1 L3,True,Z331331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV1,3,DV1 L3,True,Z331331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV1,3,DV1 L3,True,Z331331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,117,>= 1,True
+R0_3shuttles,DV2,1,DV2 L1,False,Z311331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV2,1,DV2 L1,False,Z311331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV2,1,DV2 L1,False,Z311331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV2,1,DV2 L1,False,Z311331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV2,1,DV2 L1,False,Z311331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV2,1,DV2 L1,False,Z311331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV2,1,DV2 L1,False,Z311331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV2,1,DV2 L1,False,Z311331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV2,1,DV2 L1,False,Z311331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,120,>= 1,True
+R0_3shuttles,DV2,2,DV2 L2,False,Z321331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV2,2,DV2 L2,False,Z321331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV2,2,DV2 L2,False,Z321331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV2,2,DV2 L2,False,Z321331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV2,2,DV2 L2,False,Z321331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV2,2,DV2 L2,False,Z321331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV2,2,DV2 L2,False,Z321331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV2,2,DV2 L2,False,Z321331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV2,2,DV2 L2,False,Z321331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,114,>= 1,True
+R0_3shuttles,DV2,3,DV2 L3,True,Z331331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV2,3,DV2 L3,True,Z331331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV2,3,DV2 L3,True,Z331331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV2,3,DV2 L3,True,Z331331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV2,3,DV2 L3,True,Z331331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV2,3,DV2 L3,True,Z331331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV2,3,DV2 L3,True,Z331331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV2,3,DV2 L3,True,Z331331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV2,3,DV2 L3,True,Z331331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,117,>= 1,True
+R0_3shuttles,DV3,1,DV3 L1,True,Z331331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV3,1,DV3 L1,True,Z331331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV3,1,DV3 L1,True,Z331331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV3,1,DV3 L1,True,Z331331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV3,1,DV3 L1,True,Z331331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV3,1,DV3 L1,True,Z331331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV3,1,DV3 L1,True,Z331331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV3,1,DV3 L1,True,Z331331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV3,1,DV3 L1,True,Z331331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,117,>= 1,True
+R0_3shuttles,DV3,2,DV3 L2,False,Z332331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV3,2,DV3 L2,False,Z332331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV3,2,DV3 L2,False,Z332331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV3,2,DV3 L2,False,Z332331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV3,2,DV3 L2,False,Z332331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV3,2,DV3 L2,False,Z332331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV3,2,DV3 L2,False,Z332331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV3,2,DV3 L2,False,Z332331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV3,2,DV3 L2,False,Z332331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,118,>= 1,True
+R0_3shuttles,DV3,3,DV3 L3,False,Z333331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV3,3,DV3 L3,False,Z333331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV3,3,DV3 L3,False,Z333331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV3,3,DV3 L3,False,Z333331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV3,3,DV3 L3,False,Z333331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV3,3,DV3 L3,False,Z333331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV3,3,DV3 L3,False,Z333331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV3,3,DV3 L3,False,Z333331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV3,3,DV3 L3,False,Z333331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,120,>= 1,True
+R0_3shuttles,DV4,1,DV4 L1,False,Z331131321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV4,1,DV4 L1,False,Z331131321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV4,1,DV4 L1,False,Z331131321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV4,1,DV4 L1,False,Z331131321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV4,1,DV4 L1,False,Z331131321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV4,1,DV4 L1,False,Z331131321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV4,1,DV4 L1,False,Z331131321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV4,1,DV4 L1,False,Z331131321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV4,1,DV4 L1,False,Z331131321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,160,>= 1,True
+R0_3shuttles,DV4,2,DV4 L2,False,Z331231321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV4,2,DV4 L2,False,Z331231321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV4,2,DV4 L2,False,Z331231321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV4,2,DV4 L2,False,Z331231321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV4,2,DV4 L2,False,Z331231321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV4,2,DV4 L2,False,Z331231321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV4,2,DV4 L2,False,Z331231321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV4,2,DV4 L2,False,Z331231321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV4,2,DV4 L2,False,Z331231321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,114,>= 1,True
+R0_3shuttles,DV4,3,DV4 L3,True,Z331331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV4,3,DV4 L3,True,Z331331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV4,3,DV4 L3,True,Z331331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV4,3,DV4 L3,True,Z331331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV4,3,DV4 L3,True,Z331331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV4,3,DV4 L3,True,Z331331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV4,3,DV4 L3,True,Z331331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV4,3,DV4 L3,True,Z331331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV4,3,DV4 L3,True,Z331331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,117,>= 1,True
+R0_3shuttles,DV5,1,DV5 L1,False,Z331311321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV5,1,DV5 L1,False,Z331311321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV5,1,DV5 L1,False,Z331311321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV5,1,DV5 L1,False,Z331311321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV5,1,DV5 L1,False,Z331311321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV5,1,DV5 L1,False,Z331311321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV5,1,DV5 L1,False,Z331311321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV5,1,DV5 L1,False,Z331311321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV5,1,DV5 L1,False,Z331311321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,44,>= 1,True
+R0_3shuttles,DV5,2,DV5 L2,False,Z331321321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV5,2,DV5 L2,False,Z331321321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV5,2,DV5 L2,False,Z331321321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV5,2,DV5 L2,False,Z331321321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV5,2,DV5 L2,False,Z331321321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV5,2,DV5 L2,False,Z331321321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV5,2,DV5 L2,False,Z331321321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV5,2,DV5 L2,False,Z331321321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV5,2,DV5 L2,False,Z331321321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,48,>= 1,True
+R0_3shuttles,DV5,3,DV5 L3,True,Z331331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV5,3,DV5 L3,True,Z331331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV5,3,DV5 L3,True,Z331331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV5,3,DV5 L3,True,Z331331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV5,3,DV5 L3,True,Z331331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV5,3,DV5 L3,True,Z331331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV5,3,DV5 L3,True,Z331331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV5,3,DV5 L3,True,Z331331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV5,3,DV5 L3,True,Z331331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,117,>= 1,True
+R0_3shuttles,DV6,1,DV6 L1,True,Z331331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV6,1,DV6 L1,True,Z331331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV6,1,DV6 L1,True,Z331331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV6,1,DV6 L1,True,Z331331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV6,1,DV6 L1,True,Z331331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV6,1,DV6 L1,True,Z331331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV6,1,DV6 L1,True,Z331331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV6,1,DV6 L1,True,Z331331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV6,1,DV6 L1,True,Z331331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,117,>= 1,True
+R0_3shuttles,DV6,2,DV6 L2,False,Z331332321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV6,2,DV6 L2,False,Z331332321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV6,2,DV6 L2,False,Z331332321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV6,2,DV6 L2,False,Z331332321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV6,2,DV6 L2,False,Z331332321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV6,2,DV6 L2,False,Z331332321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV6,2,DV6 L2,False,Z331332321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV6,2,DV6 L2,False,Z331332321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV6,2,DV6 L2,False,Z331332321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,117,>= 1,True
+R0_3shuttles,DV6,3,DV6 L3,False,Z331333321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV6,3,DV6 L3,False,Z331333321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV6,3,DV6 L3,False,Z331333321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV6,3,DV6 L3,False,Z331333321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV6,3,DV6 L3,False,Z331333321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV6,3,DV6 L3,False,Z331333321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV6,3,DV6 L3,False,Z331333321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV6,3,DV6 L3,False,Z331333321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV6,3,DV6 L3,False,Z331333321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,117,>= 1,True
+R0_3shuttles,DV7,1,DV7 L1,False,Z331331121,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV7,1,DV7 L1,False,Z331331121,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV7,1,DV7 L1,False,Z331331121,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV7,1,DV7 L1,False,Z331331121,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV7,1,DV7 L1,False,Z331331121,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV7,1,DV7 L1,False,Z331331121,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV7,1,DV7 L1,False,Z331331121,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV7,1,DV7 L1,False,Z331331121,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV7,1,DV7 L1,False,Z331331121,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,116,>= 1,True
+R0_3shuttles,DV7,2,DV7 L2,False,Z331331221,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV7,2,DV7 L2,False,Z331331221,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV7,2,DV7 L2,False,Z331331221,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV7,2,DV7 L2,False,Z331331221,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV7,2,DV7 L2,False,Z331331221,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV7,2,DV7 L2,False,Z331331221,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV7,2,DV7 L2,False,Z331331221,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV7,2,DV7 L2,False,Z331331221,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV7,2,DV7 L2,False,Z331331221,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,116,>= 1,True
+R0_3shuttles,DV7,3,DV7 L3,True,Z331331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV7,3,DV7 L3,True,Z331331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV7,3,DV7 L3,True,Z331331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV7,3,DV7 L3,True,Z331331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV7,3,DV7 L3,True,Z331331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV7,3,DV7 L3,True,Z331331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV7,3,DV7 L3,True,Z331331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV7,3,DV7 L3,True,Z331331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV7,3,DV7 L3,True,Z331331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,117,>= 1,True
+R0_3shuttles,DV8,1,DV8 L1,False,Z331331311,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV8,1,DV8 L1,False,Z331331311,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV8,1,DV8 L1,False,Z331331311,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV8,1,DV8 L1,False,Z331331311,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV8,1,DV8 L1,False,Z331331311,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV8,1,DV8 L1,False,Z331331311,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV8,1,DV8 L1,False,Z331331311,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV8,1,DV8 L1,False,Z331331311,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV8,1,DV8 L1,False,Z331331311,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,117,>= 1,True
+R0_3shuttles,DV8,2,DV8 L2,True,Z331331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV8,2,DV8 L2,True,Z331331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV8,2,DV8 L2,True,Z331331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV8,2,DV8 L2,True,Z331331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV8,2,DV8 L2,True,Z331331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV8,2,DV8 L2,True,Z331331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV8,2,DV8 L2,True,Z331331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV8,2,DV8 L2,True,Z331331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV8,2,DV8 L2,True,Z331331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,117,>= 1,True
+R0_3shuttles,DV8,3,DV8 L3,False,Z331331331,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV8,3,DV8 L3,False,Z331331331,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV8,3,DV8 L3,False,Z331331331,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV8,3,DV8 L3,False,Z331331331,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV8,3,DV8 L3,False,Z331331331,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV8,3,DV8 L3,False,Z331331331,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV8,3,DV8 L3,False,Z331331331,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV8,3,DV8 L3,False,Z331331331,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV8,3,DV8 L3,False,Z331331331,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,110,>= 1,True
+R0_3shuttles,DV9,1,DV9 L1,True,Z331331321,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV9,1,DV9 L1,True,Z331331321,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV9,1,DV9 L1,True,Z331331321,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV9,1,DV9 L1,True,Z331331321,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV9,1,DV9 L1,True,Z331331321,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV9,1,DV9 L1,True,Z331331321,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV9,1,DV9 L1,True,Z331331321,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV9,1,DV9 L1,True,Z331331321,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV9,1,DV9 L1,True,Z331331321,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,117,>= 1,True
+R0_3shuttles,DV9,2,DV9 L2,False,Z331331322,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV9,2,DV9 L2,False,Z331331322,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV9,2,DV9 L2,False,Z331331322,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV9,2,DV9 L2,False,Z331331322,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV9,2,DV9 L2,False,Z331331322,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV9,2,DV9 L2,False,Z331331322,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV9,2,DV9 L2,False,Z331331322,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV9,2,DV9 L2,False,Z331331322,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV9,2,DV9 L2,False,Z331331322,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,109,>= 1,True
+R0_3shuttles,DV9,3,DV9 L3,False,Z331331323,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV9,3,DV9 L3,False,Z331331323,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV9,3,DV9 L3,False,Z331331323,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV9,3,DV9 L3,False,Z331331323,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV9,3,DV9 L3,False,Z331331323,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV9,3,DV9 L3,False,Z331331323,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV9,3,DV9 L3,False,Z331331323,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV9,3,DV9 L3,False,Z331331323,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV9,3,DV9 L3,False,Z331331323,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,105,>= 1,True
+R0_3shuttles,DV9,4,DV9 L4,False,Z331331324,C1.0,C1,track position exclusivity N_occ(t) <= capacity,inequality,1,1,True
+R0_3shuttles,DV9,4,DV9 L4,False,Z331331324,C1.1,C1,"track segment exclusivity N_occ(segment, t) <= 1",inequality,1,1,True
+R0_3shuttles,DV9,4,DV9 L4,False,Z331331324,C2.2,C2,resource capacity N_busy(t) <= C_r,inequality,0,0,True
+R0_3shuttles,DV9,4,DV9 L4,False,Z331331324,C3.3,C3,trays per shuttle N_trays(t) <= 3,inequality,3,3,True
+R0_3shuttles,DV9,4,DV9 L4,False,Z331331324,C4.4,C4,workpieces per tray before assembly N_pieces(t) <= 6,inequality,6,6,True
+R0_3shuttles,DV9,4,DV9 L4,False,Z331331324,C4.5,C4,assembled products per tray <= 3,inequality,3,3,True
+R0_3shuttles,DV9,4,DV9 L4,False,Z331331324,C5.6,C5,material conservation (2 workpieces -> 1 product; 9 products per batch),equality,0,0,True
+R0_3shuttles,DV9,4,DV9 L4,False,Z331331324,C6.7,C6,scheduling precedence P1-P9,precedence,0,0,True
+R0_3shuttles,DV9,4,DV9 L4,False,Z331331324,C6.8,C6,WS9-WS4 branch and FANUC branch run concurrently,precedence,98,>= 1,True

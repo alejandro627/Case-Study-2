@@ -1,0 +1,79 @@
+{
+  "n_configurations_benchmarked": 36,
+  "successful": 36,
+  "failed": 0,
+  "eval_time_s": {
+    "mean": 0.44316268055020674,
+    "median": 0.4109084999654442,
+    "min": 0.3188287999946624,
+    "max": 0.6751209999783896,
+    "stdev": 0.09660979245150401
+  },
+  "memory": {
+    "process_rss_MB_before": 108.87109375,
+    "process_rss_MB_after": 139.2421875,
+    "tracemalloc_peak_MB_per_evaluation": [
+      4.835182189941406,
+      6.943450927734375,
+      15.060452461242676,
+      19.253172874450684,
+      24.63984489440918
+    ]
+  },
+  "deterministic_repeat_identical": true,
+  "parallel_pilot": {
+    "workers": 10,
+    "wall_time_s": 2.3541144999908283,
+    "throughput_eval_per_s": 15.292374266476951,
+    "results_identical_to_serial": true
+  },
+  "full_enumeration_estimate": {
+    "n_configurations": 26244,
+    "serial_hours": 3.2306559412110074,
+    "parallel_hours": 0.47670818624814276,
+    "parallel_workers": 10,
+    "note": "parallel estimate from the pilot throughput with warmed-up worker processes"
+  },
+  "configs": [
+    "Z131331321",
+    "Z111111111",
+    "Z333333334",
+    "Z231331321",
+    "Z331331321",
+    "Z111331321",
+    "Z121331321",
+    "Z132331321",
+    "Z133331321",
+    "Z131131321",
+    "Z131231321",
+    "Z131311321",
+    "Z131321321",
+    "Z131332321",
+    "Z131333321",
+    "Z131331121",
+    "Z131331221",
+    "Z131331311",
+    "Z131331331",
+    "Z131331322",
+    "Z131331323",
+    "Z131331324",
+    "Z122111214",
+    "Z212313321",
+    "Z232332213",
+    "Z233131324",
+    "Z321322114",
+    "Z121221214",
+    "Z132223131",
+    "Z313132113",
+    "Z313332311",
+    "Z311313232",
+    "Z223122323",
+    "Z333213112",
+    "Z312133122",
+    "Z311221233"
+  ],
+  "host": {
+    "cpu_count": 12,
+    "python_rss_MB": 144.76953125
+  }
+}
