@@ -1,0 +1,4 @@
+n_shuttles,DES_TH,table_TH,DES_E_kWh,table_E_kWh,DES_cT,table_cT,DES_cE,table_cE,n_consumers,source
+1,101.25,101.25,5.560895000000009,5.561,1.0,1.0,1.0,1.0,8,"DES (physical: shuttles, resources, transport)"
+2,173.25,173.3,7.190006950657538,7.19,1.711111111111111,1.7111,1.292958588618833,1.293,9,"DES (physical: shuttles, resources, transport)"
+3,195.75,195.8,7.723195342820389,7.723,1.9333333333333333,1.9333,1.3888403472499258,1.389,10,"DES (physical: shuttles, resources, transport)"

@@ -1,0 +1,7 @@
+design,DES_TH,DES_E_kWh,DES_TH_ratio,product_of_cT,DES_E_ratio,product_of_cE,alternatives_applied,consumers
+Z231311231,139.500000,5.996543,1.377778,1.492723,1.078341,1.157635,fanuc_conveyor_sequence; ws8_quality_inspection; ws8_ur10_unload_three_trays,10
+Z333333323,177.750000,7.766269,1.755556,1.873587,1.396586,1.374416,ws8_quality_inspection; ws9_load_workpieces; energy_management,12
+Z311111111,150.750000,5.604168,1.488889,1.540799,1.007782,1.114586,fanuc_conveyor_sequence; ws4_ur3e_assembly; ws6_ur10_load_two_trays; ws8_quality_inspection; ws8_ur10_unload_three_trays,14
+Z333333334,165.375000,7.679424,1.633333,1.676799,1.380969,1.320960,ws8_quality_inspection; ws9_load_workpieces; energy_management,12
+Z213213112,144.000000,5.679490,1.422222,1.439353,1.021327,1.103100,fanuc_conveyor_sequence; ws4_ur3e_assembly; ws6_ur10_load_two_trays; ws8_quality_inspection; ws8_ur10_unload_three_trays; ws9_load_workpieces; energy_management,14
+Z112121234,75.375000,4.555583,0.744444,0.689948,0.819218,0.799651,fanuc_conveyor_sequence; ws4_ur3e_assembly; ws6_ur10_load_two_trays; ws8_quality_inspection; ws8_ur10_unload_three_trays; ws9_load_workpieces; energy_management,11

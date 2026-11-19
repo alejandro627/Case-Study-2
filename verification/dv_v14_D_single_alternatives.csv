@@ -1,0 +1,26 @@
+DV,level,alternative,table_TH,DES_TH_8h,table_cT,DES_rate_ratio,table_E_kWh,DES_E_kWh,table_cE,DES_energy_ratio,throughput_source,energy_source
+DV2,1,Fully manual tray loading,95.175000,94.500000,0.940000,0.940000,5.305000,5.305094,0.954000,0.954000,DES with calibrated task time,DES accounting with calibrated power
+DV2,2,Collaborative robot-assisted tray loading,98.213000,97.875000,0.970000,0.970000,5.477000,5.477482,0.985000,0.985000,DES with calibrated task time,DES accounting with calibrated power
+DV2,3,Fully automated and reconfigurable tray loading,101.250000,101.250000,1.000000,1.000000,5.561000,5.560895,1.000000,1.000000,DES (measured baseline parameters),DES (measured baseline parameters)
+DV3,1,Fully manual workpiece setup,101.250000,101.250000,1.000000,1.000000,5.561000,5.560895,1.000000,1.000000,DES (measured baseline parameters),DES (measured baseline parameters)
+DV3,2,Collaborative robot-assisted workpiece setup,103.275000,103.500000,1.020000,1.020000,5.639000,5.638748,1.014000,1.014000,DES with calibrated task time,DES accounting with calibrated power
+DV3,3,Fully automated and flexible workpiece setup,105.300000,104.625000,1.040000,1.040000,5.683000,5.683235,1.022000,1.022000,DES with calibrated task time,DES accounting with calibrated power
+DV4,1,Fully manual assembly,93.150000,93.375000,0.920000,0.920000,5.261000,5.260607,0.946000,0.946000,DES with calibrated task time,DES accounting with calibrated power
+DV4,2,Collaborative robot-assisted assembly,98.213000,97.875000,0.970000,0.970000,5.477000,5.477482,0.985000,0.985000,DES with calibrated task time,DES accounting with calibrated power
+DV4,3,Fully automated and reconfigurable assembly,101.250000,101.250000,1.000000,1.000000,5.561000,5.560895,1.000000,1.000000,DES (measured baseline parameters),DES (measured baseline parameters)
+DV5,1,Fully manual assembly,95.175000,94.500000,0.940000,0.940000,5.116000,5.116023,0.920000,0.920000,DES with calibrated task time,DES accounting with calibrated power
+DV5,2,Collaborative robot-assisted assembly,99.225000,99.000000,0.980000,0.980000,5.427000,5.427434,0.976000,0.976000,DES with calibrated task time,DES accounting with calibrated power
+DV5,3,Fully automated and reconfigurable assembly,101.250000,101.250000,1.000000,1.000000,5.561000,5.560895,1.000000,1.000000,DES (measured baseline parameters),DES (measured baseline parameters)
+DV6,1,Basic inspection assistance,101.250000,101.250000,1.000000,1.000000,5.561000,5.560895,1.000000,1.000000,DES (measured baseline parameters),DES (measured baseline parameters)
+DV6,2,Guided inspection assistance,102.364000,102.375000,1.011000,1.010890,5.617000,5.616504,1.010000,1.010000,DES with the task speed-up (physical rule),DES accounting with calibrated power
+DV6,3,"Smart, adaptive inspection assistance",103.680000,103.500000,1.024000,1.023898,5.728000,5.727722,1.030000,1.030000,DES with the task speed-up (physical rule),DES accounting with calibrated power
+DV7,1,Fully manual finished-product dispatch,96.188000,95.625000,0.950000,0.950000,5.311000,5.310655,0.955000,0.955000,DES with calibrated task time,DES accounting with calibrated power
+DV7,2,Collaborative robot-assisted finished-product dispatch,99.225000,99.000000,0.980000,0.980000,5.511000,5.510847,0.991000,0.991000,DES with calibrated task time,DES accounting with calibrated power
+DV7,3,Fully automated and flexible finished-product dispatch,101.250000,101.250000,1.000000,1.000000,5.561000,5.560895,1.000000,1.000000,DES (measured baseline parameters),DES (measured baseline parameters)
+DV8,1,Low inspection,104.490000,104.625000,1.032000,1.032120,5.627600,5.625843,1.012000,1.011679,DES with the fixed inspection rule (3 of 9 products),DES accounting (no free power; result)
+DV8,2,Moderate inspection,101.250000,101.250000,1.000000,1.000000,5.561000,5.560895,1.000000,1.000000,DES (measured baseline parameters),DES (measured baseline parameters)
+DV8,3,Full inspection,95.884000,95.625000,0.947000,0.947000,5.461000,5.458450,0.982000,0.981578,DES with calibrated task time,DES accounting (no free power; result)
+DV9,1,Standard powered operation,101.250000,101.250000,1.000000,1.000000,5.561000,5.560895,1.000000,1.000000,DES (measured baseline parameters),DES (measured baseline parameters)
+DV9,2,Reduced idle-power operation,95.175000,94.500000,0.940000,0.940000,5.394000,5.394068,0.970000,0.970000,DES with calibrated wake-up delay,DES accounting with calibrated power
+DV9,3,Inactivity-triggered standby/sleep operation,92.138000,92.250000,0.910000,0.910000,5.227000,5.227241,0.940000,0.940000,DES with calibrated wake-up delay,DES accounting with calibrated power
+DV9,4,State-dependent adaptive energy management,87.075000,86.625000,0.860000,0.860000,5.116000,5.116023,0.920000,0.920000,DES with calibrated wake-up delay,DES accounting with calibrated power
