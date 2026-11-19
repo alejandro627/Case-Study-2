@@ -1,0 +1,611 @@
+{
+  "meta": {
+    "model": "Montrac Transfer Line DES",
+    "model_version": "10.0",
+    "production_process": "Transfer Line Production Process 2.0 - 01 November 2026",
+    "derived_from": "Process 2.0 model of the line. Updated for Transfer Line 3.0: process times, travel segments / legs, cycle start at WS6, initial positions. Energy, resources, topology, capacities and DV alternatives unchanged.",
+    "time_unit": "s",
+    "power_unit": "W",
+    "energy_unit": "Wh",
+    "notes": "Central configuration. Every value can be overridden with --set dotted.path=value. null means 'not measured / not available'. ALL TIMES ARE PRELIMINARY: replace them here after re-measurement, or at run time with --travel \"SEG=SECONDS\" / --set dotted.path=value.",
+    "process": "Montrac Transfer Line 3.0 - revised production sequence WS6 -> WS9 -> WS4 -> WS6 -> WS8 -> WS6 with experimentally measured processing and transport times (means of 20 repetitions)"
+  },
+  "simulation": {
+    "n_shuttles": 1,
+    "allowed_n_shuttles": [
+      1,
+      2,
+      3
+    ],
+    "horizon_h": 8.0,
+    "standard_horizons_h": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "random_seed": 42,
+    "duration_model": "deterministic"
+  },
+  "process_times_s": {
+    "ws6_ur10_load_two_trays_s": 34.78,
+    "ws9_load_workpieces_s": 17.81,
+    "ws4_ur3e_assembly_s": 59.76,
+    "ws6_ur10_fanuc_input_s": 19.84,
+    "fanuc_conveyor_sequence_s": 80.54,
+    "ws6_ur10_fanuc_output_s": 21.48,
+    "ws8_quality_inspection_s": 14.91,
+    "ws8_ur10_unload_three_trays_s": 54.22
+  },
+  "process_time_provenance": {
+    "ws6_ur10_load_two_trays_s": {
+      "step": 2,
+      "category": "measured_mean_of_20_repetitions",
+      "source": "Montrac Transfer Line 3.0 measurement campaign: sample mean of 20 repetitions",
+      "unit": "s/shuttle",
+      "note": "UR10 transfers two blister trays warehouse -> shuttle at WS6.",
+      "previous_value_DES9_3": 34.78
+    },
+    "ws9_load_workpieces_s": {
+      "step": 4,
+      "category": "measured_mean_of_20_repetitions",
+      "source": "Montrac Transfer Line 3.0 measurement campaign: sample mean of 20 repetitions",
+      "unit": "s/shuttle",
+      "note": "Operator_WS9 (dedicated): 6 Male -> tray 1, 6 Female -> tray 2 (12 workpieces).",
+      "previous_value_DES9_3": 25.0
+    },
+    "ws4_ur3e_assembly_s": {
+      "step": 6,
+      "category": "measured_mean_of_20_repetitions",
+      "source": "Montrac Transfer Line 3.0 measurement campaign: sample mean of 20 repetitions",
+      "unit": "s/batch",
+      "note": "UR3e assembles 6 products; 3 end up in each of trays 1 and 2.",
+      "previous_value_DES9_3": 180.0
+    },
+    "ws6_ur10_fanuc_input_s": {
+      "step": 8,
+      "category": "measured_mean_of_20_repetitions",
+      "source": "Montrac Transfer Line 3.0 measurement campaign: sample mean of 20 repetitions",
+      "unit": "s/batch",
+      "note": "UR10 transfers the third tray warehouse -> FANUC conveyor. Runs in parallel with the shuttle branch.",
+      "previous_value_DES9_3": 31.0
+    },
+    "fanuc_conveyor_sequence_s": {
+      "step": 9,
+      "category": "measured_mean_of_20_repetitions",
+      "source": "Montrac Transfer Line 3.0 measurement campaign: sample mean of 20 repetitions",
+      "unit": "s/batch",
+      "note": "AGGREGATE (measured): conveyor transport of tray 3 to the FANUC robot, FANUC assembly of 3 products and conveyor return to the UR10 pick position (80.54 s).",
+      "previous_value_DES9_3": 196.0
+    },
+    "ws6_ur10_fanuc_output_s": {
+      "step": 10,
+      "category": "measured_mean_of_20_repetitions",
+      "source": "Montrac Transfer Line 3.0 measurement campaign: sample mean of 20 repetitions",
+      "unit": "s/batch",
+      "note": "UR10 picks the completed FANUC tray from the conveyor and places it on the shuttle (step 10 of Process 2.0). The cell is free when it ends.",
+      "previous_value_DES9_3": 18.0
+    },
+    "ws8_quality_inspection_s": {
+      "step": 12,
+      "category": "measured_mean_of_20_repetitions",
+      "source": "Montrac Transfer Line 3.0 measurement campaign: sample mean of 20 repetitions",
+      "unit": "s/batch",
+      "note": "Operator_WS8 (dedicated) inspects 9 products.",
+      "previous_value_DES9_3": 20.0
+    },
+    "ws8_ur10_unload_three_trays_s": {
+      "step": 13,
+      "category": "measured_mean_of_20_repetitions",
+      "source": "Montrac Transfer Line 3.0 measurement campaign: sample mean of 20 repetitions",
+      "unit": "s/shuttle",
+      "note": "UR10 dispatches the three completed trays from the shuttle at WS8 to the warehouse (54.22 s, measured; the UR10 is modelled as reaching WS8 and WS6 without a separate transport, as in DES v9.3).",
+      "previous_value_DES9_3": 42.0
+    }
+  },
+  "fanuc_cell": {
+    "concurrent_jobs": 1,
+    "tray_positions": 1,
+    "note": "The conveyor is part of the FANUC cell, which holds ONE tray . The 80.54 s covers the conveyor transport to the FANUC robot, the assembly and the conveyor return to the UR10 pick position. A batch tray occupies the cell from the start of its 19.84 s UR10 input transfer until the 21.48 s UR10 transfer onto the shuttle has finished. The FANUC robot and the conveyor are ONE energy consumer.",
+    "position_released_at": "after_retrieval",
+    "output_positions": 1,
+    "output_positions_note": "Used only with position_released_at = 'end_of_sequence'. With 'after_retrieval' the tray waits on the conveyor inside the cell."
+  },
+  "tray3_workpieces": {
+    "preloaded_from_warehouse": true,
+    "note": "the third tray arrives from the warehouse with 3 Male + 3 Female workpieces already positioned; no setup operation."
+  },
+  "robot_speed": {
+    "setting": {
+      "UR10": "normal",
+      "UR3e": "normal",
+      "FANUC": "normal"
+    },
+    "duration_factor": {
+      "UR10": {
+        "low": null,
+        "normal": 1.0,
+        "high": null
+      },
+      "UR3e": {
+        "low": null,
+        "normal": 1.0,
+        "high": null
+      },
+      "FANUC": {
+        "low": null,
+        "normal": 1.0,
+        "high": null
+      }
+    },
+    "note": "Reference settings. A low/high setting with a null factor is rejected as 'not yet calibrated'. FANUC non-normal is rejected while the 196 s remains an aggregate."
+  },
+  "shuttle_speed": {
+    "setting": "normal",
+    "travel_time_factor": {
+      "low": null,
+      "normal": 1.0,
+      "high": null
+    }
+  },
+  "control_delays_s": {
+    "ws6_ur10_load_two_trays": 0.0,
+    "ws9_load_workpieces": 0.0,
+    "ws4_ur3e_assembly": 0.0,
+    "ws6_sync_retrieve_fanuc_tray": 0.0,
+    "ws8_quality_inspection": 0.0,
+    "ws8_ur10_unload_three_trays": 0.0,
+    "fanuc_input_transfer": 0.0,
+    "note": "Communication/task-release delay before each operation. Not separated in the process description -> 0.0."
+  },
+  "resource_repositioning_s": {
+    "UR10_between_WS6_and_WS8": 0.0,
+    "note": "Applied when a shared resource starts at a different station from its previous one. Not measured -> 0.0. Operators are station-bound, so only the UR10 can reposition."
+  },
+  "travel_segments_s": {
+    "S6->S8": {
+      "value": 17.46,
+      "category": "measured_leg",
+      "via": [
+        "S7"
+      ],
+      "via_time_fractions": [
+        0.706411
+      ],
+      "source": "WS6 -> WS8 leg: Montrac Transfer Line 3.0 measurement campaign: sample mean of 20 repetitions. WS7 pass-through fraction retained from DES v9.3 (blocking timing only)."
+    },
+    "S8->S9": {
+      "value": 10.22,
+      "category": "derived_from_measured_legs",
+      "via": [],
+      "via_time_fractions": [],
+      "source": "WS6 -> WS9 (27.68 s, measured) minus WS6 -> WS8 (17.46 s, measured): the shuttle passes WS8."
+    },
+    "S9->S4": {
+      "value": 21.71,
+      "category": "measured_leg",
+      "via": [
+        "S10"
+      ],
+      "via_time_fractions": [
+        0.5
+      ],
+      "source": "WS9 -> WS4 leg: Montrac Transfer Line 3.0 measurement campaign: sample mean of 20 repetitions. WS10 pass-through fraction retained from DES v9.3."
+    },
+    "S4->S6": {
+      "value": 15.73,
+      "category": "measured_leg",
+      "via": [
+        "S5"
+      ],
+      "via_time_fractions": [
+        0.571338
+      ],
+      "source": "WS4 -> WS6 leg: Montrac Transfer Line 3.0 measurement campaign: sample mean of 20 repetitions. WS5 pass-through fraction 0.571338 = 8.97 / (8.97 + 6.73) from the DES v9.3 segments (assumption; affects blocking timing at WS5 only, not the leg time)."
+    },
+    "S8->S4": {
+      "value": 18.13,
+      "category": "derived_from_measured_legs",
+      "via": [],
+      "via_time_fractions": [],
+      "source": "WS8 -> WS6 (33.86 s, measured, via WS4 and WS5) minus WS4 -> WS6 (15.73 s, measured)."
+    },
+    "S5->S6": {
+      "value": 6.7429,
+      "category": "assumed_initial_positioning_only",
+      "via": [],
+      "via_time_fractions": [],
+      "source": "Only used to bring shuttles 2-3 from the WS5 queue to WS6 at t = 0: (1 - fraction) x 15.73 s. Not measured."
+    }
+  },
+  "travel_segments_note": "every route leg equals its measured time exactly (sum of segments). S8->S9 and S8->S4 are derived from measured legs; the WS7 / WS10 / WS5 pass-through fractions only time the reservation of the intermediate position.",
+  "topology": {
+    "source": "PP7/PP8 topology, consistent with the PP8 layout figure. Unchanged.",
+    "nodes": {
+      "S4": {
+        "capacity": 1,
+        "role": "WS4 - UR3e assembly; pass-through on return",
+        "capacity_basis": "single position"
+      },
+      "S5": {
+        "capacity": "n_shuttles",
+        "role": "WS5 - pass-through and queueing buffer (start queue of shuttles 2-3)",
+        "capacity_basis": "only WS5 queues shuttles"
+      },
+      "S6": {
+        "capacity": 1,
+        "role": "WS6 - cycle start / end; tray loading and FANUC tray retrieval",
+        "capacity_basis": "single-shuttle capacity"
+      },
+      "S7": {
+        "capacity": 1,
+        "role": "WS7 - pass-through",
+        "capacity_basis": "single position"
+      },
+      "S8": {
+        "capacity": 1,
+        "role": "WS8 - quality inspection and dispatch; pass-through towards spur",
+        "capacity_basis": "single-shuttle capacity"
+      },
+      "S9": {
+        "capacity": 1,
+        "role": "WS9 - workpiece setup (spur)",
+        "capacity_basis": "single human workstation"
+      },
+      "S10": {
+        "capacity": 1,
+        "role": "WS10 - pass-through on spur",
+        "capacity_basis": "no queueing at WS10"
+      }
+    },
+    "directed_edges": [
+      [
+        "S6",
+        "S7"
+      ],
+      [
+        "S7",
+        "S8"
+      ],
+      [
+        "S8",
+        "S9"
+      ],
+      [
+        "S9",
+        "S10"
+      ],
+      [
+        "S10",
+        "S4"
+      ],
+      [
+        "S8",
+        "S4"
+      ],
+      [
+        "S4",
+        "S5"
+      ],
+      [
+        "S5",
+        "S6"
+      ]
+    ],
+    "pass_through_requires_free_node": true,
+    "blocking_rule": "No passing at occupied positions ; block signalling; FIFO at merges; every wait chain ends at the WS5 buffer."
+  },
+  "route_legs": {
+    "L1_WS6_to_WS9": {
+      "from": "S6",
+      "to": "S9",
+      "segments": [
+        "S6->S8",
+        "S8->S9"
+      ],
+      "process_step_time_s": 27.68,
+      "process_step_source": "Montrac Transfer Line 3.0 measurement campaign: sample mean of 20 repetitions"
+    },
+    "L2_WS9_to_WS4": {
+      "from": "S9",
+      "to": "S4",
+      "segments": [
+        "S9->S4"
+      ],
+      "process_step_time_s": 21.71,
+      "process_step_source": "Montrac Transfer Line 3.0 measurement campaign: sample mean of 20 repetitions"
+    },
+    "L3_WS4_to_WS6": {
+      "from": "S4",
+      "to": "S6",
+      "segments": [
+        "S4->S6"
+      ],
+      "process_step_time_s": 15.73,
+      "process_step_source": "Montrac Transfer Line 3.0 measurement campaign: sample mean of 20 repetitions"
+    },
+    "L4_WS6_to_WS8": {
+      "from": "S6",
+      "to": "S8",
+      "segments": [
+        "S6->S8"
+      ],
+      "process_step_time_s": 17.46,
+      "process_step_source": "Montrac Transfer Line 3.0 measurement campaign: sample mean of 20 repetitions"
+    },
+    "L5_WS8_to_WS6_return": {
+      "from": "S8",
+      "to": "S6",
+      "segments": [
+        "S8->S4",
+        "S4->S6"
+      ],
+      "process_step_time_s": 33.86,
+      "process_step_source": "Montrac Transfer Line 3.0 measurement campaign: sample mean of 20 repetitions (via WS4 and WS5)"
+    },
+    "Linit_WS5_to_WS6": {
+      "from": "S5",
+      "to": "S6",
+      "segments": [
+        "S5->S6"
+      ],
+      "process_step_source": "initial positioning of shuttles 2-3 only (assumed time, see S5->S6)"
+    }
+  },
+  "operations": {
+    "ws6_ur10_load_two_trays": {
+      "station": "S6",
+      "resources": [
+        "UR10"
+      ]
+    },
+    "ws9_load_workpieces": {
+      "station": "S9",
+      "resources": [
+        "Operator_WS9"
+      ]
+    },
+    "ws4_ur3e_assembly": {
+      "station": "S4",
+      "resources": [
+        "UR3e"
+      ]
+    },
+    "ws6_sync_retrieve_fanuc_tray": {
+      "station": "S6",
+      "resources": [
+        "UR10"
+      ]
+    },
+    "ws8_quality_inspection": {
+      "station": "S8",
+      "resources": [
+        "Operator_WS8"
+      ]
+    },
+    "ws8_ur10_unload_three_trays": {
+      "station": "S8",
+      "resources": [
+        "UR10"
+      ]
+    }
+  },
+  "cycle_steps": [
+    {
+      "type": "operation",
+      "name": "ws6_ur10_load_two_trays"
+    },
+    {
+      "type": "move",
+      "name": "L1_WS6_to_WS9",
+      "on_departure": "start_fanuc_branch"
+    },
+    {
+      "type": "operation",
+      "name": "ws9_load_workpieces"
+    },
+    {
+      "type": "move",
+      "name": "L2_WS9_to_WS4"
+    },
+    {
+      "type": "operation",
+      "name": "ws4_ur3e_assembly"
+    },
+    {
+      "type": "move",
+      "name": "L3_WS4_to_WS6"
+    },
+    {
+      "type": "operation",
+      "name": "ws6_sync_retrieve_fanuc_tray"
+    },
+    {
+      "type": "move",
+      "name": "L4_WS6_to_WS8"
+    },
+    {
+      "type": "operation",
+      "name": "ws8_quality_inspection"
+    },
+    {
+      "type": "operation",
+      "name": "ws8_ur10_unload_three_trays"
+    },
+    {
+      "type": "move",
+      "name": "L5_WS8_to_WS6_return"
+    }
+  ],
+  "initial_positions": {
+    "1": "S6",
+    "2": "S5",
+    "3": "S5"
+  },
+  "initial_positions_note": "DES v10.0: shuttles start at WS6. WS6 holds one shuttle, so shuttle 1 starts at WS6 and shuttles 2-3 start in the WS5 queue directly upstream of WS6 and enter WS6 in order (assumption: the physical start arrangement for 2-3 shuttles is not specified).",
+  "initial_positioning_legs": {
+    "S5": "Linit_WS5_to_WS6"
+  },
+  "resources": {
+    "UR10": {
+      "capacity": 1,
+      "type": "robot",
+      "note": "ONE shared robot: WS6 tray loading, FANUC input, FANUC output, WS8 dispatch."
+    },
+    "UR3e": {
+      "capacity": 1,
+      "type": "cobot",
+      "note": "Assembly of 6 products at WS4."
+    },
+    "FANUC": {
+      "capacity": 1,
+      "type": "robot",
+      "note": "Assembly of 3 products; occupied with the conveyor during the 196 s aggregate."
+    },
+    "Conveyor": {
+      "capacity": 1,
+      "type": "conveyor",
+      "note": "FANUC input/output transport; occupied during the 196 s aggregate."
+    },
+    "Operator_WS9": {
+      "capacity": 1,
+      "type": "human",
+      "station": "S9",
+      "task": "workpiece setup (ws9_load_workpieces)",
+      "note": "Dedicated to WS9: 6 Male -> tray 1, 6 Female -> tray 2 (12 workpieces), then releases the shuttle."
+    },
+    "Operator_WS8": {
+      "capacity": 1,
+      "type": "human",
+      "station": "S8",
+      "task": "quality inspection (ws8_quality_inspection)",
+      "note": "Dedicated to WS8: inspects the 9 products and identifies nonconforming ones, then releases them for the UR10 dispatch."
+    }
+  },
+  "energy": {
+    "source": "ec_cs2.xlsx (energy consumption data sheet of the line)",
+    "note": "Single source of the electrical power parameters. Values exactly as in ec_cs2.xlsx. E_active [Wh] = active_W * t_active[s] / 3600; E_idle [Wh] = idle_W * t_idle[s] / 3600. Active/idle times come from the DES activity table (montrac_des_v8_6_tlpp2.py, activity_times).",
+    "time_balance_tolerance_s": 1e-06,
+    "transfer_line_infrastructure": {
+      "always_on": true,
+      "basis": "SmartRouter + electrical turnout: manufacturer-informed proxies; controller: engineering assumption",
+      "note": "Fixed load, independent of the number of shuttles, powered for the whole horizon. Not repeated under Auxiliary.",
+      "components": {
+        "SmartRouter": {
+          "quantity": 1,
+          "power_W_each": 4.8,
+          "basis": "manufacturer-informed proxy"
+        },
+        "electrical_turnout": {
+          "quantity": 1,
+          "power_W_each": 8.64,
+          "basis": "manufacturer-informed proxy"
+        },
+        "Montrac_controller_and_electronics": {
+          "quantity": 1,
+          "power_W_each": 20.0,
+          "basis": "engineering assumption"
+        }
+      },
+      "reference_total_W": 33.44
+    },
+    "shuttle": {
+      "active_W": 27.0,
+      "idle_W": 5.0,
+      "per": "shuttle",
+      "basis": "as in ec_cs2.xlsx",
+      "activity_definition": "active = moving + operation performed on the shuttle at a station (engaged time); idle = horizon - active"
+    },
+    "robot_systems": {
+      "UR10": {
+        "active_W": 350.0,
+        "idle_W": 50.0,
+        "includes_controller": true,
+        "basis": "as in ec_cs2.xlsx"
+      },
+      "UR3e": {
+        "active_W": 150.0,
+        "idle_W": 50.0,
+        "includes_controller": true,
+        "basis": "ec_cs2.xlsx"
+      }
+    },
+    "fanuc_cell": {
+      "active_W": 550.0,
+      "idle_W": 100.0,
+      "covers": "FANUC robot + conveyor (one consumer)",
+      "basis": "ec_cs2.xlsx",
+      "activity_definition": "active = 196 s sequence; idle = horizon - active"
+    },
+    "continuous_equipment": {
+      "Endian": {
+        "active_W": 60.0,
+        "idle_W": 10.0,
+        "basis": "manufacturer figure (ec_cs2.xlsx)"
+      },
+      "HMI": {
+        "active_W": 80.0,
+        "idle_W": 15.0,
+        "basis": "manufacturer figure (ec_cs2.xlsx)"
+      },
+      "Auxiliary": {
+        "active_W": 40.0,
+        "idle_W": 7.0,
+        "basis": "manufacturer figure (ec_cs2.xlsx); other consumers not included elsewhere"
+      }
+    },
+    "continuous_equipment_note": "Always on: active time = horizon, idle time = 0. idle_W is retained for future scenarios and is not applied.",
+    "human_operators_note": "Operator_WS9 and Operator_WS8 are not electrical consumers; their activity is reported but no power is assigned."
+  },
+  "material": {
+    "trays_per_shuttle": 3,
+    "workpieces_per_tray_capacity": 6,
+    "initial_trays_on_shuttle": 0,
+    "trays_loaded_at_ws6": 2,
+    "tray1_male_workpieces": 6,
+    "tray2_female_workpieces": 6,
+    "tray3_male_workpieces": 3,
+    "tray3_female_workpieces": 3,
+    "ur3e_products_per_tray": [
+      3,
+      3
+    ],
+    "note": "trays 1 and 2 hold 3 UR3e products each; tray 3 holds 3 FANUC products; all three trays leave at WS8; shuttles start and return empty."
+  },
+  "quality": {
+    "defect_probability_per_product": 0.0,
+    "correction_time_per_defective_product_s": 0.0,
+    "correction_included_in_inspection_time": true,
+    "defect_disposition": "correct_and_continue",
+    "note": "Nominal: defect-free."
+  },
+  "analytical_reference": {
+    "cycle_ws6_to_ws6_single_shuttle_s": 319.4,
+    "cycle_composition": "34.78 + 27.68 + 17.81 + 21.71 + 59.76 + 15.73 + 21.48 + 17.46 + 14.91 + 54.22 + 33.86 = 319.40",
+    "branch_a_shuttle_s": 142.69,
+    "branch_a_composition": "27.68 + 17.81 + 21.71 + 59.76 + 15.73",
+    "branch_b_fanuc_s": 100.38,
+    "branch_b_composition": "19.84 + 80.54",
+    "note": "Comparison values, never imposed: the DES computes cycle times from events and resources."
+  },
+  "station_release_clearance_s": 2.0,
+  "station_release_clearance_note": "Rule: a shuttle that had to wait because its next STOP position was occupied waits this extra time after the occupying shuttle has departed (its release) before it starts moving. Charged once per blocked move; never applied when the position was free. Scope 'stop_stations': only the destination of a route leg (WS6, WS9, WS4, WS8 and WS5), never a pass-through position (WS7, WS10, WS4 on the return leg). 'all_positions' applies it at every position.",
+  "scenario_hooks": {
+    "extra_hold_at_ws4_s_by_batch": {},
+    "note": "TEST ONLY. Keeps the shuttle of the given batch at WS4 for extra seconds after UR3e assembly (used to verify delayed returns). Empty = nominal."
+  },
+  "cycle_steps_note": "DES v10.0: a cycle starts at WS6 with the UR10 loading of two trays and ends when the shuttle is back at WS6 (WS6 -> WS9 -> WS4 -> WS6 -> WS8 -> WS6). The FANUC branch starts on the departure from WS6.",
+  "station_release_clearance_scope": "stop_stations",
+  "resources_note": "one operator per station, capacity 1 each, independent (no shared lock, pool or synchronisation). A human resource used at another station is rejected by validate_config.",
+  "model_assumptions": {
+    "route": "WS6 -> WS9 -> WS4 -> WS6 -> WS8 -> WS6; shuttles start at WS6 and start and return empty",
+    "process_times": "means of 20 repetitions on Transfer Line 3.0; deterministic in the baseline model",
+    "trays": "trays 1 and 2 hold 3 UR3e products each; tray 3 arrives from the warehouse with 3 male + 3 female workpieces and holds 3 FANUC products; all three trays leave at WS8",
+    "fanuc_cell": "robot and conveyor form one cell that holds one tray; the cell is free once the UR10 has transferred the tray from the conveyor onto the shuttle",
+    "ur10": "shared resource, first come first served, no preemption; the shuttle waits at WS6 for the FANUC tray",
+    "clearance": "the station release clearance applies only at stop stations, never at pass-through positions",
+    "operators": "one independent operator at WS9 (workpiece setup) and one at WS8 (inspection), capacity 1 each, no electrical consumption",
+    "energy": "parameters from ec_cs2.xlsx; FANUC robot and conveyor are one consumer; a shuttle is active while moving or while an operation is performed on it and at idle power while blocked or waiting; infrastructure (Endian, HMI, auxiliary) always on",
+    "nominal_single_shuttle_cycle_s": 319.4
+  }
+}

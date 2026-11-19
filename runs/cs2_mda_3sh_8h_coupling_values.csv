@@ -1,0 +1,31 @@
+group,coupling_variable,value,unit,producer_to_consumer,source
+CG1,shuttle arrivals at stop stations,878,count,D1 -> D2-D5,CG1.1 ARRIVE events
+CG1,station-access authorisations,2105,count,"D1 -> D1, D2-D5",CG1.2 node requests granted
+CG1,mean wait for station access,8.11598480607203,s / access,D1 -> D2-D5,node Resource queues
+CG1,mean blocking wait per shuttle cycle,97.34924622597609,s / cycle,D1 -> D1,WAIT_FOR_NODE events
+CG1,mean station-release clearance per cycle,4.0,s / cycle,D1 -> D1,STATION_RELEASE_CLEARANCE events
+CG1,mean operation time handed to D2-D5 per cycle,202.95999999999995,s / cycle,D2-D5 -> D1,CG1.3 / CG1.4
+CG2,FANUC input transfers completed,175,count,D2 -> D3,CG2.2
+CG2,mean wait of a batch for the free FANUC cell,90.54449001908547,s / batch,D3 -> D2,fanuc_positions Resource
+CG2,mean FANUC branch duration (WS6 departure -> tray ready),208.89454716194345,s / batch,D2 + D3,job timestamps
+CG2,mean UR3e branch duration (WS6 departure -> shuttle back),172.37887400537076,s / batch,D1 + D5 + D3,job timestamps
+CG2,mean tray wait at the FANUC output,10.176695477256652,s / batch,D3 -> D2,tray_ready -> retrieval start
+CG2,mean shuttle wait for the FANUC tray at WS6,46.69236863382938,s / batch,D3 -> D1/D2,"all_of(shuttle_back, tray_ready)"
+CG2,mean wait for the UR10 after synchronisation,0.0,s / batch,D2 -> D3,UR10 Resource queue
+CG2,mean overlap of UR3e and FANUC assembly,20.432904522742916,s / batch,D3,job timestamps
+CG3,inspections completed (release authorisations),174,count,D4 -> D2,CG3.1 / CG3.2
+CG3,mean delay inspection end -> unloading start,3.717617753333178,s / batch,D4 -> D2,event log
+CG3,dispatch confirmations (completed batches),174,count,D2 -> D4,CG3.4 / CG3.5
+CG3,finished products dispatched to Storage B,1566,products,D4 -> CG6,batch records
+CG4,workpiece setups completed,176,count,D5 -> D3,CG4.1
+CG4,prepared workpieces per batch (Male + Female),12,workpieces,D5 -> D3,tray states
+CG4,mean delay setup end -> UR3e assembly start,35.24540430479853,s / batch,D5 -> D3,event log (includes WS9 -> WS4 travel)
+CG5,cycle-step commands issued,1929,count,D6 -> D1-D5,CG5.1
+CG5,resource acquisitions under the D6 policy,1403,count,D6 -> D2-D5,CG5.4
+CG5,total task-release control delay,0.0,s / 8 h,D6 -> D2-D5,CONTROL_DELAY events
+CG5,total DV9 wake-up delay,0.0,s / 8 h,"D6 -> D2, D3, D5",WAKE_UP events
+CG5,energy-management policy,standard_powered_operation,-,D6 -> CG6,CG5.6
+CG6,throughput TH,195.75,products/h,D4 -> MDA,CG6.1
+CG6,total energy E,7.723195342820389,kWh / 8 h,"D1, D2, D3, D6 -> MDA",CG6.4
+CG6,specific energy,4.931797792350185,Wh/product,MDA,CG6.5
+CG6,feasible (C1-C6),True,-,D1-D5 -> MDA,CG6.6

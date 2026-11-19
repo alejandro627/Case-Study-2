@@ -1,0 +1,33 @@
+id,group,producer,consumer,name,exchanges,first_s,last_s
+CG1.1,CG1,D1,"D2, D3, D4, D5",shuttle_arrival,450,62.46,28745.999999999938
+CG1.2,CG1,D1,"D1, D2-D5",station_access_authorization,1083,34.78,28798.239999999936
+CG1.3,CG1,D1,"D2, D3, D4, D5",shuttle_availability,541,0.0,28745.999999999938
+CG1.4,CG1,"D2, D3, D4, D5",D1,workstation_operation_completion,541,34.78,28780.779999999937
+CG1.5,CG1,D1,D1 (other shuttles),station_release,1083,34.78,28798.239999999936
+CG2.1,CG2,D3,D2,fanuc_tray_position_available,91,34.78,28780.779999999937
+CG2.2,CG2,D2,D3,fanuc_input_transfer_complete,90,54.620000000000005,28481.21999999994
+CG2.3,CG2,D3,D2,fanuc_assembly_complete,90,135.16000000000003,28561.75999999994
+CG2.4,CG2,D3,D2,fanuc_output_tray_ready,90,135.16000000000003,28561.75999999994
+CG2.5,CG2,D2,D3,output_transfer_synchronisation,90,177.47000000000003,28604.069999999938
+CG2.6,CG2,D2,D3,fanuc_cell_released,90,198.95000000000002,28625.549999999937
+CG3.1,CG3,D4,D2,inspection_complete,90,231.32000000000002,28657.919999999936
+CG3.2,CG3,D4,D2,product_release_authorization,90,231.32000000000002,28657.919999999936
+CG3.3,CG3,D2,D4,unloading_ready,90,231.32000000000002,28657.919999999936
+CG3.4,CG3,D2,D4,unloading_complete,90,285.54,28712.139999999938
+CG3.5,CG3,D4,MDA coordinator,dispatch_confirmation,90,285.54,28712.139999999938
+CG4.1,CG4,D5,D3,workpiece_setup_complete,90,80.27,28506.86999999994
+CG4.2,CG4,D5,D3,prepared_workpieces,90,80.27,28506.86999999994
+CG4.3,CG4,D5,D3,assembly_prerequisites_verified,90,101.98,28528.57999999994
+CG5.1,CG5,D6,"D1, D2, D3, D4, D5",operation_command,992,0.0,28780.779999999937
+CG5.2,CG5,D6,"D2, D3, D4, D5",task_release_control_delay,632,0.0,28780.779999999937
+CG5.3,CG5,D6,D3,fanuc_branch_start_command,91,34.78,28780.779999999937
+CG5.4,CG5,D6,"D2, D3, D4, D5",resource_acquisition_policy,722,0.0,28780.779999999937
+CG5.5,CG5,"D1, D2, D3, D4, D5",D6,status_report,1,28800.0,28800.0
+CG5.6,CG5,D6,energy accounting,energy_management_setting,1,28800.0,28800.0
+CG5.7,CG5,D1,D6,cycle_completion,90,319.40000000000003,28745.999999999938
+CG6.1,CG6,D4,MDA coordinator,production_counts_and_throughput,1,28800.0,28800.0
+CG6.2,CG6,D1,MDA coordinator,loops_waits_station_occupancy,1,28800.0,28800.0
+CG6.3,CG6,"D1, D2, D3, D4, D5",MDA coordinator,resource_utilization,1,28800.0,28800.0
+CG6.4,CG6,"D1, D2, D3, D6",MDA coordinator,energy_by_consumer,1,28800.0,28800.0
+CG6.5,CG6,MDA coordinator,MDF (future),system_responses,1,28800.0,28800.0
+CG6.6,CG6,"D1, D2, D3, D4, D5",MDA coordinator,feasibility_checks,1,28800.0,28800.0

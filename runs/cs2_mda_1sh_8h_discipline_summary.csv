@@ -1,0 +1,7 @@
+discipline,name,design_variables,resources,active_s,mean_utilisation_pct,energy_consumers,energy_Wh,n_kpis
+D1,Shuttle transportation,DV1,Shuttle_1,28800.0,100.0,"Transfer line infrastructure, Shuttle_1",483.52,35
+D2,Robotic material handling,"DV2, DV7",UR10,11782.800000000041,40.91250000000014,UR10,1381.9000000000035,17
+D3,Assembly process,"DV4, DV5","UR3e, FANUC_cell",12627.000000000004,21.921875000000007,"UR3e, FANUC_cell",2255.4750000000054,38
+D4,Quality inspection and dispatch,"DV6, DV8",Operator_WS8,1341.899999999988,4.659374999999959,-,0.0,17
+D5,Workpiece setup,DV3,Operator_WS9,1602.9000000000412,5.565625000000144,-,0.0,9
+D6,Digital coordination and control,DV9,-,0.0,,"Endian, HMI, Auxiliary",1440.0,24

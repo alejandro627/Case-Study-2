@@ -1,0 +1,8 @@
+station,capacity,production_operations,occupancy_time_s,occupancy_pct_of_capacity,entries,peak_concurrent_shuttles,mean_entry_wait_s,max_entry_wait_s,total_entry_wait_s
+S4,1,ws4_ur3e_assembly,7987.049999999937,27.73281249999978,180,1,0.0,0.0,0.0
+S5,1,none (pass-through/buffer),1617.6864132000915,5.616966712500317,180,1,0.0,0.0,0.0
+S6,1,"ws6_ur10_load_two_trays, ws6_sync_retrieve_fanuc_tray",6311.89358679987,21.91629717638844,181,1,0.0,0.0,0.0
+S7,1,none (pass-through/buffer),2232.4424268600387,7.751536204375135,181,1,0.0,0.0,0.0
+S8,1,"ws8_quality_inspection, ws8_ur10_unload_three_trays",7149.517573139961,24.824713795624863,181,1,0.0,0.0,0.0
+S9,1,ws9_load_workpieces,2524.4600000001346,8.76548611111158,91,1,0.0,0.0,0.0
+S10,1,none (pass-through/buffer),976.9499999999666,3.3921874999998844,90,1,0.0,0.0,0.0

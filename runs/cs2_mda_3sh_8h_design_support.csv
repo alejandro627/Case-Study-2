@@ -1,0 +1,10 @@
+design_variable,name,primary_discipline,level,alternative,is_baseline_level,des_status,des_representation_or_reason
+DV1,Number of active Montrac shuttles,D1,3,Three active shuttles,False,implemented,3 shuttles (simulation.n_shuttles = 3)
+DV2,Tray-loading automation level,D2,3,Fully automated and reconfigurable tray loading,True,implemented,UR10 loads two empty trays at WS6 (34.78 s)
+DV3,Workpiece-setup automation level,D5,1,Fully manual workpiece setup,True,implemented,Operator_WS9 manual setup at WS9 (17.81 s)
+DV4,WS4 assembly automation level,D3,3,Fully automated and reconfigurable assembly,True,implemented,UR3e assembly at WS4 (59.76 s)
+DV5,FANUC assembly automation level,D3,3,Fully automated and reconfigurable assembly,True,implemented,FANUC robot + conveyor cell (80.54 s)
+DV6,Quality-control assistance level,D4,1,Basic inspection assistance,True,implemented,Operator_WS8 inspection without assistance (14.91 s)
+DV7,Finished-product dispatch automation level,D2,3,Fully automated and flexible finished-product dispatch,True,implemented,UR10 dispatches three trays at WS8 (54.22 s)
+DV8,Inspection policy level,D4,2,Moderate inspection,True,implemented,"inspection of the 9 products of each batch (14.91 s), defect-free nominal case"
+DV9,Energy-management policy,D6,1,Standard powered operation,True,implemented,"idle powers of the energy section; Endian, HMI, auxiliary and infrastructure always on"

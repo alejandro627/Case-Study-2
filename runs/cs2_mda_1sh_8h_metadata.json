@@ -1,0 +1,44 @@
+{
+  "design_vector": {
+    "DV1": 1,
+    "DV2": 3,
+    "DV3": 1,
+    "DV4": 3,
+    "DV5": 3,
+    "DV6": 1,
+    "DV7": 3,
+    "DV8": 2,
+    "DV9": 1
+  },
+  "status": "evaluated",
+  "feasible": true,
+  "system_responses": {
+    "throughput_products_per_h": 101.25,
+    "energy_total_kWh": 5.560895000000009,
+    "energy_total_Wh": 5560.8950000000095,
+    "specific_energy_Wh_per_product": 6.865302469135814,
+    "finished_products": 810,
+    "completed_production_batches": 90,
+    "completed_shuttle_loops": 90,
+    "n_shuttles": 1,
+    "horizon_h": 8.0
+  },
+  "des_version": "10.0",
+  "mda_version": "1.5",
+  "mode": "des",
+  "config_source": "dict",
+  "config_sha256": "48a0ac5659c548ef26a33bf08ae94f0a5fbb29259d5662222a8f1ee21b678a78",
+  "design_variable_overrides": {
+    "simulation.n_shuttles": 1
+  },
+  "energy_management_policy": "standard_powered_operation",
+  "calibrated_alternatives": [],
+  "overrides": [],
+  "runtime_s": 0.19065110001247376,
+  "python": "3.12.0",
+  "simpy": "4.1.1",
+  "pandas": "2.2.3",
+  "n_events": 3156,
+  "coupling_iterations": 0,
+  "coupling_resolution": "single shared SimPy event-driven simulation"
+}

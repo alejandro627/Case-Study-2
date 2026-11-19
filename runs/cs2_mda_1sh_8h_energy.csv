@@ -1,0 +1,10 @@
+consumer,group,active_power_W,idle_power_W,active_time_s,idle_time_s,active_energy_Wh,idle_energy_Wh,total_energy_Wh,total_energy_kWh,time_balance_error_s,time_balance_ok,power_basis
+Transfer line infrastructure,montrac_infrastructure,33.44,,28800.0,0.0,267.52,0.0,267.52,0.26752,0.0,True,SmartRouter + electrical turnout: manufacturer-informed proxies; controller: engineering assumption
+Shuttle_1,shuttles,27.0,5.0,28800.0,0.0,216.0,0.0,216.0,0.216,0.0,True,as in ec_cs2.xlsx
+UR10,robot_systems,350.0,50.0,11782.800000000041,17017.19999999996,1145.550000000004,236.34999999999945,1381.9000000000035,1.3819000000000035,0.0,True,as in ec_cs2.xlsx
+UR3e,robot_systems,150.0,50.0,5378.399999999948,23421.600000000053,224.09999999999783,325.3000000000007,549.3999999999985,0.5493999999999984,0.0,True,ec_cs2.xlsx
+FANUC_cell,robot_systems,550.0,100.0,7248.600000000055,21551.399999999943,1107.4250000000084,598.6499999999985,1706.0750000000069,1.706075000000007,0.0,True,ec_cs2.xlsx
+Endian,continuous_equipment,60.0,10.0,28800.0,0.0,480.0,0.0,480.0,0.48,0.0,True,manufacturer figure (ec_cs2.xlsx)
+HMI,continuous_equipment,80.0,15.0,28800.0,0.0,640.0,0.0,640.0,0.64,0.0,True,manufacturer figure (ec_cs2.xlsx)
+Auxiliary,continuous_equipment,40.0,7.0,28800.0,0.0,320.0,0.0,320.0,0.32,0.0,True,manufacturer figure (ec_cs2.xlsx); other consumers not included elsewhere
+Total system,total,,,,,4400.59500000001,1160.2999999999986,5560.8950000000095,5.560895000000009,,True,
