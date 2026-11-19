@@ -1,0 +1,56 @@
+{
+  "source": "sensitivity\\factorial_results.csv",
+  "n_configurations": 26244,
+  "all_feasible": true,
+  "objectives": "maximize TH (finished products / 8 h, products/h); minimize E (kWh / 8 h)",
+  "dominance": "a dominates b iff TH_a >= TH_b and E_a <= E_b with one strict; exact float comparison (no tolerance)",
+  "robust_to_1e-9_kWh": true,
+  "storage_precision_note": "factorial CSV stores 16 significant digits (<= 1 ULP from the DES values); NSGA-II points are matched to the reference with |dE| <= 1e-9 kWh and exact TH",
+  "n_pareto_designs": 59,
+  "n_pareto_points": 59,
+  "max_designs_per_point": 1,
+  "min_energy": {
+    "TH": 76.5,
+    "E": 3.880114074251445,
+    "config_ids": [
+      "Z111111134"
+    ]
+  },
+  "max_throughput": {
+    "TH": 208.125,
+    "E": 7.775444808787586,
+    "config_ids": [
+      "Z313332211"
+    ]
+  },
+  "baseline": {
+    "config_id": "Z131331321",
+    "TH": 101.25,
+    "E": 5.560895000000009,
+    "pareto_optimal": false,
+    "n_dominating_designs": 1698,
+    "n_dominating_pareto_designs": 12,
+    "example_dominating_pareto_designs": [
+      {
+        "config_id": "Z211111134",
+        "TH": 126.0,
+        "E": 4.691281273332872
+      },
+      {
+        "config_id": "Z311311113",
+        "TH": 148.5,
+        "E": 5.447858987060037
+      }
+    ]
+  },
+  "objective_ranges_all_designs": {
+    "TH": [
+      75.375,
+      208.125
+    ],
+    "E": [
+      3.880114074251445,
+      8.017779789354453
+    ]
+  }
+}

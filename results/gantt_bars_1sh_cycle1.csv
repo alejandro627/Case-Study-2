@@ -1,0 +1,15 @@
+shuttle_id,loop_index,batch_id,lane,activity,kind,detail,start_s,end_s,duration_s,cycle_start_s,cycle_end_s,split_s,merge_s,short_label
+1,1,1,sequential,UR10 transfers two blisters from WH to the shuttle,UR10,UR10,0.0,34.78,34.78,0.0,319.40000000000003,34.78,177.47000000000003,UR10 load
+1,1,1,shuttle branch,The shuttle travels from WS6 to WS9,Shuttle travel,S6 -> S9,34.78,62.46,27.68,0.0,319.40000000000003,34.78,177.47000000000003,WS6-WS9
+1,1,1,FANUC branch,UR10 transfers one blister from WH to the conveyor,UR10,UR10,34.78,54.620000000000005,19.840000000000003,0.0,319.40000000000003,34.78,177.47000000000003,UR10 input
+1,1,1,FANUC branch,FANUC performs the assembly + conveyor movement,FANUC cell,Conveyor+FANUC,54.620000000000005,135.16000000000003,80.54000000000002,0.0,319.40000000000003,34.78,177.47000000000003,FANUC + conveyor
+1,1,1,shuttle branch,Setup of the workpieces (operator WS9),Operator WS9 (setup),Operator_WS9,62.46,80.27,17.809999999999995,0.0,319.40000000000003,34.78,177.47000000000003,Setup
+1,1,1,shuttle branch,The shuttle travels from WS9 to WS4,Shuttle travel,S9 -> S4,80.27,101.98,21.710000000000008,0.0,319.40000000000003,34.78,177.47000000000003,WS9-WS4
+1,1,1,shuttle branch,UR3e performs the assembly,UR3e,UR3e,101.98,161.74,59.760000000000005,0.0,319.40000000000003,34.78,177.47000000000003,UR3e assembly
+1,1,1,FANUC branch,FANUC tray / batch waits,Waiting,FANUC tray waits for the shuttle,135.16000000000003,177.47000000000003,42.31,0.0,319.40000000000003,34.78,177.47000000000003,wait
+1,1,1,shuttle branch,The shuttle travels from WS4 to WS6,Shuttle travel,S4 -> S6,161.74,177.47000000000003,15.730000000000018,0.0,319.40000000000003,34.78,177.47000000000003,WS4-WS6
+1,1,1,sequential,UR10 transfers the blister from the conveyor to the shuttle,UR10,UR10,177.47000000000003,198.95000000000002,21.47999999999999,0.0,319.40000000000003,34.78,177.47000000000003,UR10 retrieve
+1,1,1,sequential,The shuttle travels from WS6 to WS8,Shuttle travel,S6 -> S8,198.95000000000002,216.41000000000003,17.460000000000008,0.0,319.40000000000003,34.78,177.47000000000003,WS6-WS8
+1,1,1,sequential,Quality inspection (operator WS8),Operator WS8 (QC),Operator_WS8,216.41000000000003,231.32000000000002,14.909999999999997,0.0,319.40000000000003,34.78,177.47000000000003,QC
+1,1,1,sequential,UR10 transfers the three blister trays from the shuttle to dispatch,UR10,UR10,231.32000000000002,285.54,54.22,0.0,319.40000000000003,34.78,177.47000000000003,UR10 unload
+1,1,1,sequential,The shuttle travels from WS8 to WS6,Shuttle travel,S8 -> S6,285.54,319.40000000000003,33.860000000000014,0.0,319.40000000000003,34.78,177.47000000000003,WS8-WS6

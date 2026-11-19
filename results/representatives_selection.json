@@ -1,0 +1,10 @@
+{
+  "choice": {
+    "R0": "Z131331321",
+    "R1": "Z111111134",
+    "R2": "Z313332211",
+    "R3": "Z311111114",
+    "_d_min": 0.573632194812447
+  },
+  "compromise_rule": "min Euclidean distance to the ideal point, objectives normalised by the exact-front ranges (equal weights)"
+}

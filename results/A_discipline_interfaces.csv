@@ -1,0 +1,59 @@
+discipline,direction,name,counterpart,description
+D1,input,DV1 n_shuttles,design vector,number of active shuttles (simulation.n_shuttles)
+D1,input,"travel_segments_s, route_legs, topology",configuration,"segment times, legs, rail graph, node capacities"
+D1,input,"move command (leg, on_departure)",D6 (CG5.1),next cycle step issued by the dispatcher
+D1,input,operation completion,D2-D5 (CG1.4),the shuttle may depart from the station
+D1,output,shuttle arrival at station,D2-D5 (CG1.1),ARRIVE event; operation can start
+D1,output,station access authorization,D1/D2-D5 (CG1.2),node Resource request granted
+D1,output,station release,D1 other shuttles (CG1.5),node released when the shuttle departs
+D1,output,loop completed at the cycle start station (WS6),D6 (CG5.7),loop record; next cycle starts
+D1,output,"shuttle activity, waits, station occupancy, loops",CG6,for responses and energy
+D2,input,"DV2 tray-loading level, DV7 dispatch level",design vector,level 3 = UR10 (implemented)
+D2,input,shuttle at WS6 / WS8,"D1 (CG1.1, CG1.3)",shuttle stopped and handed over
+D2,input,FANUC cell position free,D3 (CG2.1),the UR10 may place tray 3 on the conveyor
+D2,input,FANUC output tray ready,D3 (CG2.4),job.tray_ready event
+D2,input,product-release authorization,D4 (CG3.2),trays inspected
+D2,input,"control delay, acquisition order","D6 (CG5.2, CG5.4)",existing coordination settings
+D2,output,two empty trays on the shuttle,D5 via D1,trays for the workpiece setup
+D2,output,FANUC input-transfer completion,D3 (CG2.2),tray 3 (3 Male + 3 Female) on the conveyor
+D2,output,output-transfer synchronisation,D3 (CG2.5),"shuttle back AND tray ready, UR10 acquired"
+D2,output,FANUC cell released,D3 (CG2.6),end of the 18 s transfer onto the shuttle
+D2,output,unloading readiness / completion,"D4 (CG3.3, CG3.4)",UR10 at WS8 / trays in Storage B
+D2,output,operation completion,D1 (CG1.4),shuttle may depart
+D2,output,UR10 activity and waits,CG6,utilisation and energy
+D3,input,"DV4 WS4 level, DV5 FANUC level",design vector,level 3 = UR3e / FANUC cell (implemented)
+D3,input,"prepared workpieces (6 Male, 6 Female)","D5 (CG4.1, CG4.2) via D1",trays 1 and 2 at WS4
+D3,input,branch start command,D6 (CG5.3),shuttle departs WS6
+D3,input,FANUC input-transfer completion,D2 (CG2.2),tray 3 on the conveyor
+D3,input,"output-transfer synchronisation, cell release","D2 (CG2.5, CG2.6)",tray placed on the shuttle
+D3,output,assembly prerequisites verified,D3 (CG4.3),trays 1 and 2 loaded before the UR3e starts
+D3,output,cell tray position available,D2 (CG2.1),UR10 may load the conveyor
+D3,output,FANUC assembly completion,D2 (CG2.3),end of the 196 s sequence
+D3,output,FANUC output-tray readiness,D2 (CG2.4),job.tray_ready event
+D3,output,"6 products (UR3e) on trays 1-2, 3 products (FANUC) on tray 3",D4 via D1/D2,assembled products
+D3,output,"branch durations, overlap, queue, UR3e/FANUC activity",CG6,responses and energy
+D4,input,"DV6 QC assistance level, DV8 inspection policy level",design vector,"DV6 = 1, DV8 = 2 (implemented)"
+D4,input,shuttle at WS8 with 3 trays / 9 products,"D1 (CG1.1, CG1.3)",assembled products from D3
+D4,input,unloading readiness / completion,"D2 (CG3.3, CG3.4)",UR10 dispatch
+D4,input,control delay,D6 (CG5.2),existing coordination setting
+D4,output,inspection completion,D2 (CG3.1),products inspected
+D4,output,product-release authorization,D2 (CG3.2),trays in state PRODUCTS_INSPECTED
+D4,output,dispatch confirmation,CG6 (CG3.5),finished products and batches counted at Storage B
+D4,output,operation completion,D1 (CG1.4),shuttle may continue to the UR10 dispatch
+D4,output,Operator_WS8 activity,CG6,utilisation
+D5,input,DV3 workpiece-setup level,design vector,"level 1 = manual, Operator_WS9 (implemented)"
+D5,input,shuttle at WS9 with 2 empty trays,"D1 (CG1.1, CG1.3), D2",trays loaded at WS6
+D5,input,control delay,D6 (CG5.2),existing coordination setting
+D5,output,workpiece-setup completion,D3 (CG4.1),end of the 25 s setup
+D5,output,prepared workpieces,D3 (CG4.2),"tray 1: 6 Male, tray 2: 6 Female"
+D5,output,operation completion,D1 (CG1.4),shuttle may depart to WS4
+D5,output,Operator_WS9 activity,CG6,utilisation
+D6,input,DV9 energy-management policy,design vector,level 1 = standard powered operation (implemented)
+D6,input,"cycle_steps, control_delays_s, energy section",configuration,existing coordination settings
+D6,input,equipment / workstation / shuttle status,D1-D5 (CG5.5),status collection
+D6,input,loop completed at the cycle start station (WS6),D1 (CG5.7),start of the next production cycle
+D6,output,operation and move commands,D1-D5 (CG5.1),next step of the production cycle
+D6,output,task-release control delay,D2-D5 (CG5.2),0 s in the baseline
+D6,output,FANUC-branch start command,D3 (CG5.3),on the shuttle's departure from WS6
+D6,output,resource acquisition policy,D2-D5 (CG5.4),"fixed order, FIFO, no preemption"
+D6,output,energy-management setting,energy accounting (CG5.6),standard powered operation

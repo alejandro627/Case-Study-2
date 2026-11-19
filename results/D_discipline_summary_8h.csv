@@ -1,0 +1,19 @@
+discipline,name,design_variables,resources,active_s,mean_utilisation_pct,energy_consumers,energy_Wh,n_kpis,n_shuttles
+D1,Shuttle transportation,DV1,Shuttle_1,28800.0,100.0,"Transfer line infrastructure, Shuttle_1",483.52,35,1
+D2,Robotic material handling,"DV2, DV7",UR10,11782.800000000041,40.91250000000014,UR10,1381.9000000000035,17,1
+D3,Assembly process,"DV4, DV5","UR3e, FANUC_cell",12627.000000000004,21.921875000000007,"UR3e, FANUC_cell",2255.4750000000054,38,1
+D4,Quality inspection and dispatch,"DV6, DV8",Operator_WS8,1341.899999999988,4.659374999999959,-,0.0,17,1
+D5,Workpiece setup,DV3,Operator_WS9,1602.9000000000412,5.565625000000144,-,0.0,9,1
+D6,Digital coordination and control,DV9,-,0.0,,"Endian, HMI, Auxiliary",1440.0,24,1
+D1,Shuttle transportation,DV1,"Shuttle_1, Shuttle_2",49511.77571514006,85.95794394989593,"Transfer line infrastructure, Shuttle_1, Shuttle_2",650.0919627036337,38,2
+D2,Robotic material handling,"DV2, DV7",UR10,20180.413375600045,70.07087977638905,UR10,2081.701114633337,17,2
+D3,Assembly process,"DV4, DV5","UR3e, FANUC_cell",21762.749439540086,37.78255111031265,"UR3e, FANUC_cell",3018.2138733205675,38,2
+D4,Quality inspection and dispatch,"DV6, DV8",Operator_WS8,2296.1399999999794,7.972708333333261,-,0.0,17,2
+D5,Workpiece setup,DV3,Operator_WS9,2778.3600000000743,9.647083333333592,-,0.0,9,2
+D6,Digital coordination and control,DV9,-,0.0,,"Endian, HMI, Auxiliary",1440.0,24,2
+D1,Shuttle transportation,DV1,"Shuttle_1, Shuttle_2, Shuttle_3",55971.982417880005,64.78238705773147,"Transfer line infrastructure, Shuttle_1, Shuttle_2, Shuttle_3",729.5710036648222,41,3
+D2,Robotic material handling,"DV2, DV7",UR10,22811.052802399998,79.20504445277777,UR10,2300.9210668666665,17,3
+D3,Assembly process,"DV4, DV5","UR3e, FANUC_cell",24566.567802400044,42.65029132361119,"UR3e, FANUC_cell",3252.7032722889003,38,3
+D4,Quality inspection and dispatch,"DV6, DV8",Operator_WS8,2594.339999999977,9.00812499999992,-,0.0,17,3
+D5,Workpiece setup,DV3,Operator_WS9,3150.2860130801255,10.938493100972659,-,0.0,9,3
+D6,Digital coordination and control,DV9,-,0.0,,"Endian, HMI, Auxiliary",1440.0,24,3

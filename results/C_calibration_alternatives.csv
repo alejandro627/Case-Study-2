@@ -1,0 +1,18 @@
+alternative,description,time rule,time / wake-up (s),power rule,power (W) / idle factor,table c_T,DES c_T,table c_E,DES c_E,admissible
+DV2_L1,Fully manual tray loading,calibrated,55.16723404245022,equipment,85.98395791843193,0.94,0.9400000000002818,0.954,0.954,True
+DV2_L2,Collaborative robot-assisted tray loading,calibrated,44.65835051608792,robot_mode,258.99256268832437,0.97,0.9699999999981603,0.985,0.9849999999999999,True
+DV3_L2,Collaborative robot-assisted workpiece setup,calibrated,11.54725490194096,robot,125.98430756033945,1.02,1.0200000000000675,1.014,1.014,True
+DV3_L3,Fully automated and flexible workpiece setup,calibrated,5.525384614705217,robot,273.1276702346224,1.04,1.0400000000023022,1.022,1.022,True
+DV4_L1,Fully manual assembly,calibrated,87.53391304264369,equipment,0.05161675870025081,0.92,0.9200000000022099,0.946,0.9459999999999998,True
+DV4_L2,Collaborative robot-assisted assembly,calibrated,69.63835051523483,robot_mode,119.91584524678834,0.97,0.9700000000006748,0.985,0.9849999999999999,True
+DV5_L1,Fully manual assembly,calibrated,143.23723404244583,equipment,160.52619022579955,0.94,0.9400000000002963,0.92,0.92,True
+DV5_L2,Collaborative robot-assisted assembly,calibrated,129.36836734746612,robot_mode,351.74870284011723,0.98,0.9799999999984127,0.976,0.9760000000000002,True
+DV6_L2,Guided inspection assistance,speed_up,11.46923076923077,always_on,4.193202083333858,1.011,1.0108899152032742,1.01,1.01,True
+DV6_L3,"Smart, adaptive inspection assistance",speed_up,7.455,always_on,14.474397916667726,1.024,1.0238984436358947,1.03,1.0300000000000002,True
+DV7_L1,Fully manual finished-product dispatch,calibrated,71.0305263148066,equipment,139.04063565066613,0.95,0.9500000000027778,0.955,0.9550000000000001,True
+DV7_L2,Collaborative robot-assisted finished-product dispatch,calibrated,60.73836734606084,robot_mode,308.72986091726136,0.98,0.9800000000026411,0.991,0.9910000000000001,True
+DV8_L1,Low inspection,fixed,4.970000000000001,none,,1.032,1.0321204679118452,1.012,1.0116793250007412,True
+DV8_L3,Full inspection,calibrated,32.78560718002882,none,,0.947,0.9470000000015221,0.982,0.9815776739142856,True
+DV9_L2,Reduced idle-power operation,calibrated,5.096808510643314,idle_power_factor,0.8179821034611385,0.94,0.9399999999999445,0.97,0.9699999999999999,True
+DV9_L3,Inactivity-triggered standby/sleep operation,calibrated,7.897252747170569,idle_power_factor,0.6552505987483858,0.91,0.9100000000008519,0.94,0.94,True
+DV9_L4,State-dependent adaptive energy management,calibrated,12.998837209488556,idle_power_factor,0.5208740427631718,0.86,0.8599999999982749,0.92,0.92,True
